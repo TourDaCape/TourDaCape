@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tours - Tour Da Cape</title>
+    <meta name="description" content="Explore our wide range of luxury tours in Cape Town. Cultural, scenic, foodie, and boozy tours available.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html" class="logo-text">TOUR DA CAPE</a>
+                </div>
+                <nav class="main-nav">
+                    <ul class="nav-menu">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="about.html" class="nav-link">About</a></li>
+                        <li><a href="tours.html" class="nav-link active">Tours</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                    <div class="mobile-menu-toggle">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </nav>
+                
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header text-center">
+        <div class="container">
+            <h1 class="page-title">Our Tours</h1>
+            <p class="page-subtitle">Discover the beauty of Cape Town through our carefully curated experiences</p>
+            <div class="hero-buttons" style="margin-top: 12px;">
+                <a href="#cultural" class="btn btn-primary btn-lg"><i class="fas fa-route"></i> Explore Tours</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tours Content -->
+    <section class="tours-content">
+        <div class="container">
+            <!-- Search by Category -->
+            <div class="category-filter" aria-label="Filter tours by category">
+                <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+                <button class="filter-btn" data-filter="cultural" aria-pressed="false">Cultural</button>
+                <button class="filter-btn" data-filter="scenic" aria-pressed="false">Scenic</button>
+                <button class="filter-btn" data-filter="foodie" aria-pressed="false">Foodie</button>
+                <button class="filter-btn" data-filter="boozy" aria-pressed="false">Boozy</button>
+            </div>
+            <!-- Cultural Tours -->
+            <div id="cultural" class="tour-category">
+                <div class="section-header text-center">
+                    <h2>Cultural & Heritage Tours</h2>
+                    <p class="section-subtitle">Walk through Cape Town's rich history and vibrant cultural tapestry</p>
+                </div>
+                    <div class="tours-grid">
+                    <div class="tour-card" data-category="cultural">
+                        <div class="tour-image">
+            <picture>
+                <source srcset="optimized-images/bo-kaap.webp" type="image/webp">
+                <img src="optimized-images/bo-kaap.jpg" alt="City Bowl & Bo-Kaap Heritage" class="tour-img" loading="lazy" decoding="async" fetchpriority="low">
+            </picture>
+                        </div>
+                        <div class="tour-content">
+                            <h3 class="tour-title">City Bowl & Bo-Kaap Heritage</h3>
+                            <p class="tour-description">Explore the colorful Malay Quarter, visit Mandela's prison cell, and learn Cape Town's liberation history.</p>
+                            <div class="tour-meta">
+                                <span class="tour-duration"></span>
+                                <span class="tour-price">From R1,650</span>
+                            </div>
+                <a href="#" class="btn btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="tour-card" data-category="cultural">
+                        <div class="tour-image">
+            <picture>
+                <source srcset="optimized-images/district-six.webp" type="image/webp">
+                <img src="optimized-images/district-six.jpg" alt="City Bowl & District Six Heritage" class="tour-img" loading="lazy" decoding="async" fetchpriority="low">
+            </picture>
+                        </div>
+                        <div class="tour-content">
+ <h3 class="tour-title">City Bowl & District Six Heritage</h3>
+                            <p class="tour-description">Visit Nelson Mandela's prison cell on Robben Island and explore the District Six Museum to understand Cape Town's apartheid history.</p>
+                            <div class="tour-meta">
+                                <span class="tour-duration"></span>
+                                <span class="tour-price">From R1,650</span>
+                            </div>
+                            <a href="#" class="btn btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="tour-card" data-category="cultural">
+                        <div class="tour-image">
+            <picture>
+                <source srcset="optimized-images/langa-jazz.webp" type="image/webp">
+                <img src="optimized-images/langa-jazz.jpg" alt="Langa Township & Jazz Safari" class="tour-img" loading="lazy" decoding="async" fetchpriority="low">
+            </picture>
+                        </div>
+                        <div class="tour-content">
+                            <h3 class="tour-title">Langa Township & Jazz Safari</h3>
+                            <p class="tour-description">Experience authentic township life in Langa, visit local shebeens, and enjoy traditional South African jazz music and cuisine.</p>
+                            <div class="tour-meta">
+                                <span class="tour-duration"></span>
+                                <span class="tour-price">From R1,500</span>
+                            </div>
+                            <a href="#" class="btn btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scenic Tours -->
+            <div id="scenic" class="tour-category">
+                <div class="section-header text-center">
+                    <h2>Scenic & Nature Tours</h2>
+                    <p class="section-subtitle">Discover Cape Town's breathtaking landscapes and unique wildlife</p>
+                </div>
+                    <div class="tours-grid">
+                    <div class="tour-card" data-category="scenic">
+                        <div class="tour-image">
+            <picture>
+                <source srcset="optimized-images/cape-point.webp" type="image/webp">
+                <img src="optimized-images/cape-point.jpg" alt="Cape Peninsula & Penguin Colony" class="tour-img" loading="lazy" decoding="async" fetchpriority="low">
+            </picture>
+                        </div>
+                        <div class="tour-content">
+                            <h3 class="tour-title">Cape Peninsula & Penguin Colony</h3>
+                            <p class="tour-description">Journey to the Cape of Good Hope, meet African penguins at Boulders Beach, and drive the scenic Chapman's Peak.</p>
+                            <div class="tour-meta">
+                                <span class="tour-duration"></span>
+                                <span class="tour-price">From R1,850</span>
+                            </div>
+                            <a href="#" class="btn btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="tour-card" data-category="scenic">
+                        <div class="tour-image">
+            <picture>
+                <source srcset="optimized-images/simons-town.webp" type="image/webp">
+                <img src="optimized-images/simons-town.jpg" alt="Simon's Town harbor & Boulders penguins" class="tour-img" loading="lazy" decoding="async" fetchpriority="low">
+            </picture>
+                        </div>
+                        <div class="tour-content">
+                            <h3 class="tour-title">Boulders Beach Penguin Colony & Simon's Town</h3>
+                            <p class="tour-description">Meet African penguins at Boulders Beach, explore historic Simon's Town naval base, and enjoy lunch at Kalk Bay Harbour.</p>
+                            <div class="tour-meta">
+                                <span class="tour-duration"></span>
+                                <span class="tour-price">From R1,950</span>
+                            </div>
+                            <a href="#" class="btn btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="tour-card" data-category="scenic">
+                        <div class="tour-image">
+            <picture>
+                <source srcset="optimized-images/table-mountain.webp" type="image/webp">
+                <img src="optimized-images/table-mountain.jpg" alt="Table Mountain & Lion's Head Sunrise" class="tour-img" loading="lazy" decoding="async" fetchpriority="low">
+            </picture>
+                        </div>
+                        <div class="tour-content">
+                            <h3 class="tour-title">Table Mountain & Lion's Head Sunrise</h3>
+                            <p class="tour-description">Skip-the-line cable car to Table Mountain, guided hike up Lion's Head for sunrise, and explore Kirstenbosch Botanical Gardens.</p>
+                            <div class="tour-meta">
+                                <span class="tour-duration"></span>
+                                <span class="tour-price">From R1,750</span>
+                            </div>
+                            <a href="#" class="btn btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Foodie Tours -->
+            <div id="foodie" class="tour-category">
+                <div class="section-header text-center">
+                    <h2>Culinary & Wine Tours</h2>
+                    <p class="section-subtitle">Savor the flavors of Cape Town and the renowned Winelands</p>
+                </div>
+                    <div class="tours-grid">
+                    <div class="tour-card" data-category="foodie">
+                        <div class="tour-image">
+            <picture>
+                <source srcset="optimized-images/wine-tasting.webp" type="image/webp">
+                <img src="optimized-images/wine-tasting.jpg" alt="Wine Lovers Stellenbosch & Franschhoek" class="tour-img" loading="lazy" decoding="async" fetchpriority="low">
+            </picture>
+                        </div>
+                        <div class="tour-content">
+                            <h3 class="tour-title">Wine Lovers: Stellenbosch & Franschhoek</h3>
+                            <p class="tour-description">Taste award-winning wines in historic Stellenbosch and explore the French heritage of Franschhoek valley.</p>
+                            <div class="tour-meta">
+                                <span class="tour-duration"></span>
+                                <span class="tour-price">From R2,200</span>
+                            </div>
+                            <a href="#" class="btn btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="tour-card" data-category="foodie">
+                        <div class="tour-image">
+            <picture>
+                <source srcset="optimized-images/va-waterfront.webp" type="image/webp">
+                <img src="optimized-images/va-waterfront.jpg" alt="V&A Waterfront Food Market" class="tour-img" loading="lazy" decoding="async" fetchpriority="low">
+            </picture>
+                        </div>
+                        <div class="tour-content">
+                            <h3 class="tour-title">V&A Waterfront Food Market & Craft Beer</h3>
+                            <p class="tour-description">Explore the V&A Food Market, taste local delicacies, visit craft breweries, and enjoy fresh seafood with Table Mountain views.</p>
+                            <div class="tour-meta">
+                                <span class="tour-duration">Half Day</span>
+                                <span class="tour-price">From R950</span>
+                            </div>
+                            <a href="#" class="btn btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="tour-card" data-category="foodie">
+                        <div class="tour-image">
+            <picture>
+                <source srcset="optimized-images/wine-tram.webp" type="image/webp">
+                <img src="optimized-images/wine-tram.jpg" alt="Franschhoek Wine Tram" class="tour-img" loading="lazy" decoding="async" fetchpriority="low">
+            </picture>
+                        </div>
+                        <div class="tour-content">
+                            <h3 class="tour-title">Franschhoek Wine Tram & French Heritage</h3>
+                            <p class="tour-description">Ride the historic Franschhoek Wine Tram, visit boutique wineries, learn about French Huguenot heritage, and enjoy MCC tastings.</p>
+                            <div class="tour-meta">
+                                <span class="tour-duration"></span>
+                                <span class="tour-price">From R2,450</span>
+                            </div>
+                            <a href="#" class="btn btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Boozy Tours -->
+            <div id="boozy" class="tour-category">
+                <div class="section-header text-center">
+                    <h2>Boozy & Craft Experiences</h2>
+                    <p class="section-subtitle">Discover Cape Town's craft beer, gin, and wine scene</p>
+                </div>
+                    <div class="tours-grid">
+                    <div class="tour-card" data-category="boozy">
+                        <div class="tour-image">
+            <picture>
+                <source srcset="optimized-images/craft-beer.webp" type="image/webp">
+                <img src="optimized-images/craft-beer.jpg" alt="Craft Beer Safari" class="tour-img" loading="lazy" decoding="async" fetchpriority="low">
+            </picture>
+                        </div>
+                        <div class="tour-content">
+                            <h3 class="tour-title">Craft Beer Safari</h3>
+                            <p class="tour-description">Visit some of Cape Town's coolest microbreweries for guided tastings and food pairings.</p>
+                            <div class="tour-meta">
+                                <span class="tour-duration">Half Day</span>
+                                <span class="tour-price">From R1,050</span>
+                            </div>
+                            <a href="#" class="btn btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="tour-card" data-category="boozy">
+                        <div class="tour-image">
+            <picture>
+                <source srcset="optimized-images/gin.webp" type="image/webp">
+                <img src="optimized-images/gin.jpg" alt="The Gin Jol" class="tour-img" loading="lazy" decoding="async" fetchpriority="low">
+            </picture>
+                        </div>
+                        <div class="tour-content">
+                            <h3 class="tour-title">The Gin Jol</h3>
+                            <p class="tour-description">Sample Cape fynbos-infused gins at top distilleries with a local expert guide.</p>
+                            <div class="tour-meta">
+                                <span class="tour-duration">Half Day</span>
+                                <span class="tour-price">From R1,150</span>
+                            </div>
+                            <a href="#" class="btn btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content text-center">
+                <h2>Ready for Your Adventure?</h2>
+                <p>Book your tour today and experience the best of Cape Town with Tour Da Cape.</p>
+                <div class="cta-buttons">
+                
+                
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <span class="logo-text">TOUR DA CAPE</span>
+                    </div>
+                    <p class="footer-description">Luxury tours and unforgettable experiences in Cape Town and beyond.</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="TripAdvisor" class="social-icon"><i class="fab fa-tripadvisor"></i></a>
+                        <a href="#" aria-label="YouTube" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="tours.html">Tours</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Explore</h3>
+                    <ul class="footer-links">
+                    
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-phone"></i> <span>061 621 9784</span></li>
+                        <li><i class="fas fa-envelope"></i> <span>tourdacape1@outlook.com</span></li>
+                        <li><i class="fas fa-map-marker-alt"></i> <span>Cape Town, South Africa</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Tour Da Cape. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
