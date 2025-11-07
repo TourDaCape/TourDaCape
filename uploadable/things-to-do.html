@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Things To Do in Cape Town | Tour Da Cape</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html" class="logo-text">TOUR DA CAPE</a>
+                </div>
+                <nav class="main-nav">
+                    <ul class="nav-menu">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="about.html" class="nav-link">About</a></li>
+                        <li><a href="tours.html" class="nav-link">Tours</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                    <div class="mobile-menu-toggle">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </nav>
+                
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section with Carousel set to 3 minutes rotation -->
+    <section class="hero">
+        <div class="hero-carousel" data-interval="180000">
+            <div class="carousel-slide active">
+            <picture>
+                <source srcset="optimized-images/table-mountain.webp" type="image/webp">
+                <img src="optimized-images/table-mountain.jpg" alt="Table Mountain and Cape Town skyline" class="hero-image" loading="eager" fetchpriority="high" decoding="async">
+            </picture>
+            </div>
+            <div class="carousel-slide">
+            <picture>
+                <source srcset="optimized-images/wine-tasting.webp" type="image/webp">
+                <img src="optimized-images/wine-tasting.jpg" alt="Cape Winelands and vineyards" class="hero-image" loading="lazy" fetchpriority="low" decoding="async">
+            </picture>
+            </div>
+            <div class="carousel-slide">
+            <picture>
+                <source srcset="optimized-images/cape-point.webp" type="image/webp">
+                <img src="optimized-images/cape-point.jpg" alt="Cape Town coastal scenery" class="hero-image" loading="lazy" fetchpriority="low" decoding="async">
+            </picture>
+            </div>
+        </div>
+        <div class="hero-content">
+            <div class="container">
+                <div class="hero-text">
+                    <h1 class="hero-title">Things To Do in Cape Town</h1>
+                    <p class="hero-subtitle">Iconic sights, authentic neighborhoods, ocean adventures, wine valleys, and mountain trails — let’s plan your perfect day in the Mother City.</p>
+                    <div class="hero-buttons">
+                        <a href="#list" class="btn btn-primary">Browse Ideas</a>
+            <a href="#" class="btn btn-secondary" onclick="openWhatsAppChat(); return false;">Plan With Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-indicators">
+            <span class="indicator active" data-slide="0"></span>
+            <span class="indicator" data-slide="1"></span>
+            <span class="indicator" data-slide="2"></span>
+        </div>
+    </section>
+
+    <!-- Things To Do List -->
+    <section id="list" class="bg-light">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Explore Cape Town — Top Experiences</h2>
+                <p class="section-subtitle">A curated list of must-do activities across city, coast, and winelands</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card fade-up" style="animation-delay:0.05s">
+                    <h3 class="feature-title">Table Mountain</h3>
+                    <p class="feature-description">Take the cable car or hike to the summit for magnificent views.</p>
+                </div>
+                <div class="feature-card fade-up" style="animation-delay:0.1s">
+                    <h3 class="feature-title">Bo-Kaap</h3>
+                    <p class="feature-description">Stroll colorful streets and learn about Cape Malay heritage.</p>
+                </div>
+                <div class="feature-card fade-up" style="animation-delay:0.15s">
+                    <h3 class="feature-title">V&A Waterfront</h3>
+                    <p class="feature-description">Shop, dine, and explore the harbor — perfect for sunset strolls.</p>
+                </div>
+                <div class="feature-card fade-up" style="animation-delay:0.2s">
+                    <h3 class="feature-title">Sunset Cruise</h3>
+                    <p class="feature-description">Sail from the Waterfront on a yacht or boat at golden hour.</p>
+                </div>
+                <div class="feature-card fade-up" style="animation-delay:0.25s">
+                    <h3 class="feature-title">Two Oceans Aquarium</h3>
+                    <p class="feature-description">Discover marine life where the Atlantic meets the Indian Ocean.</p>
+                </div>
+                <div class="feature-card fade-up" style="animation-delay:0.3s">
+                    <h3 class="feature-title">Kirstenbosch Gardens</h3>
+                    <p class="feature-description">Picnic, walk, and photograph South Africa’s famed botanical garden.</p>
+                </div>
+                <div class="feature-card fade-up" style="animation-delay:0.35s">
+                    <h3 class="feature-title">Boulders Beach Penguins</h3>
+                    <p class="feature-description">Meet friendly penguins at Simon’s Town — a perfect family stop.</p>
+                </div>
+                <div class="feature-card fade-up" style="animation-delay:0.4s">
+                    <h3 class="feature-title">Cape Point Reserve</h3>
+                    <p class="feature-description">Stand at the southern tip with dramatic cliffs and ocean views.</p>
+                </div>
+                <div class="feature-card fade-up" style="animation-delay:0.45s">
+                    <h3 class="feature-title">Chapman’s Peak Drive</h3>
+                    <p class="feature-description">Scenic coastal drive via Hout Bay and Noordhoek — breathtaking photo stops.</p>
+                </div>
+                <div class="feature-card fade-up" style="animation-delay:0.5s">
+                    <h3 class="feature-title">Constantia Valley</h3>
+                    <p class="feature-description">Wine tasting at the oldest wine farms near Cape Town.</p>
+                </div>
+                <div class="feature-card fade-up" style="animation-delay:0.55s">
+                    <h3 class="feature-title">Paarl & Wellington</h3>
+                    <p class="feature-description">Explore rich winelands with heritage and scenic valleys.</p>
+                </div>
+                <div class="feature-card fade-up" style="animation-delay:0.6s">
+                    <h3 class="feature-title">Worcester & Tulbagh</h3>
+                    <p class="feature-description">Discover wine country towns with Cape Dutch architecture.</p>
+                </div>
+                <div class="feature-card fade-up" style="animation-delay:0.65s">
+                    <h3 class="feature-title">Franschhoek Tram</h3>
+                    <p class="feature-description">Hop-on, hop-off wine tasting with French heritage in a beautiful valley.</p>
+                </div>
+                <div class="feature-card fade-up" style="animation-delay:0.7s">
+                    <h3 class="feature-title">Durbanville Wine Region</h3>
+                    <p class="feature-description">Famous for Sauvignon Blanc — enjoy pairings and platters.</p>
+                </div>
+                <div class="feature-card fade-up" style="animation-delay:0.75s">
+                    <h3 class="feature-title">Clifton Beach</h3>
+                    <p class="feature-description">Relax on Cape Town’s iconic beach — perfect for a beach day.</p>
+                </div>
+                <div class="feature-card fade-up" style="animation-delay:0.8s">
+                    <h3 class="feature-title">Seal Island – Hout Bay</h3>
+                    <p class="feature-description">Take a boat trip from the harbor to meet playful seals.</p>
+                </div>
+                <div class="feature-card fade-up" style="animation-delay:0.85s">
+                    <h3 class="feature-title">Kalk Bay</h3>
+                    <p class="feature-description">Best fish & chips, quirky shops, and a charming harbor walk.</p>
+                </div>
+                <div class="feature-card fade-up" style="animation-delay:0.9s">
+                    <h3 class="feature-title">Lion’s Head & Signal Hill</h3>
+                    <p class="feature-description">Hike Lion’s Head or drive Signal Hill for panoramic views.</p>
+                </div>
+                <div class="feature-card fade-up" style="animation-delay:0.95s">
+                    <h3 class="feature-title">Atlantis Dunes & Paragliding</h3>
+                    <p class="feature-description">Quad biking on dunes and paragliding off Signal Hill.</p>
+                </div>
+                <div class="feature-card fade-up" style="animation-delay:1.0s">
+                    <h3 class="feature-title">Clarence Drive</h3>
+                    <p class="feature-description">Scenic drive from Gordon’s Bay to Rooi-Els along the coast.</p>
+                </div>
+                <div class="feature-card fade-up" style="animation-delay:1.05s">
+                    <h3 class="feature-title">Boulders Beach at Sunset</h3>
+                    <p class="feature-description">Capture penguins with Table Mountain backdrop at golden hour.</p>
+                </div>
+                <div class="feature-card fade-up" style="animation-delay:1.1s">
+                    <h3 class="feature-title">Sir Lowry’s Pass to Hermanus</h3>
+                    <p class="feature-description">Admire views and spot whales in season from lookouts near Hermanus.</p>
+                </div>
+                <div class="feature-card fade-up" style="animation-delay:1.15s">
+                    <h3 class="feature-title">Du Toitskloof to Robertson & Montagu</h3>
+                    <p class="feature-description">Mountain pass vistas and renowned Chenin Blanc in the fruit region.</p>
+                </div>
+                <div class="feature-card fade-up" style="animation-delay:1.2s">
+                    <h3 class="feature-title">Stellenbosch, Franschhoek & Babylonstoren</h3>
+                    <p class="feature-description">Iconic wine tours across famed estates and garden farm experiences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA with Contact Details -->
+    <section class="bg-blue text-white">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Safe, Reliable & Affordable Travel</h2>
+                <p class="section-subtitle">Contact Neville Pillay to book your travel and tours</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3 class="feature-title">Call or WhatsApp</h3>
+                    <p class="feature-description">061-621 9780 / 075-185 4019</p>
+                </div>
+                <div class="feature-card">
+                    <h3 class="feature-title">Email</h3>
+                    <p class="feature-description"><a href="mailto:tourdacape1@outlook.com" class="btn btn-outline">tourdacape1@outlook.com</a></p>
+                </div>
+                <div class="feature-card">
+                    <h3 class="feature-title">Plan Your Day</h3>
+                    <p class="feature-description">Tell us what you’d like to do and we’ll tailor the perfect itinerary.</p>
+                </div>
+            </div>
+            <div class="text-center" style="margin-top:20px">
+            <a href="#" class="btn btn-secondary" onclick="openWhatsAppChat(); return false;">Send Us Your Request</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <span class="logo-text">TOUR DA CAPE</span>
+                    </div>
+                    <p class="footer-description">Luxury tours and unforgettable experiences in Cape Town and beyond.</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="TripAdvisor" class="social-icon"><i class="fab fa-tripadvisor"></i></a>
+                        <a href="#" aria-label="YouTube" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="tours.html">Tours</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Explore</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-phone"></i> <span>061 621 9784</span></li>
+                        <li><i class="fas fa-envelope"></i> <span>tourdacape1@outlook.com</span></li>
+                        <li><i class="fas fa-map-marker-alt"></i> <span>Cape Town, South Africa</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Tour Da Cape. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            initHeroCarousel();
+        });
+    </script>
+</body>
+<!-- Simple page for vibrant green theme and animated content -->
+</html>

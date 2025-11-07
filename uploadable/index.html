@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Da Cape - Premium Cape Town Tours & Experiences</title>
+    <meta name="description" content="Experience the best of Cape Town with Tour Da Cape. Premium guided tours, adventures, and exclusive travel experiences in South Africa's most beautiful city.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html" class="logo-text">TOUR DA CAPE</a>
+                </div>
+                <nav class="main-nav">
+                    <ul class="nav-menu">
+                        <li><a href="index.html" class="nav-link active">Home</a></li>
+                        <li><a href="about.html" class="nav-link">About</a></li>
+                        <li><a href="tours.html" class="nav-link">Tours</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                    <div class="mobile-menu-toggle">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </nav>
+                <div class="header-cta">
+                    <a href="#" class="btn btn-primary" onclick="openWhatsAppChat(); return false;"><i class="fas fa-calendar-alt"></i> Book Now</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section with Carousel -->
+    <section class="hero fullscreen-hero">
+        <div class="hero-carousel">
+            <div class="carousel-slide active">
+            <picture>
+                <source srcset="optimized-images/table-mountain.webp" type="image/webp">
+                <img src="optimized-images/table-mountain.jpg" alt="Table Mountain and Cape Town skyline" class="hero-image" loading="eager" fetchpriority="high" decoding="async">
+            </picture>
+            </div>
+            <div class="carousel-slide">
+            <picture>
+                <source srcset="optimized-images/wine-tasting.webp" type="image/webp">
+                <img src="optimized-images/wine-tasting.jpg" alt="Cape Winelands and vineyards" class="hero-image" loading="lazy" fetchpriority="low" decoding="async">
+            </picture>
+            </div>
+            <div class="carousel-slide">
+            <picture>
+                <source srcset="optimized-images/cape-point.webp" type="image/webp">
+                <img src="optimized-images/cape-point.jpg" alt="Cape Town coastal scenery" class="hero-image" loading="lazy" fetchpriority="low" decoding="async">
+            </picture>
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="container">
+                <div class="hero-text text-center">
+                    <span class="hero-tagline centered-text">Experience Cape Town Like Never Before</span>
+                    <h1 class="hero-title centered-text">Unforgettable Cape Town Adventures</h1>
+                    <p class="hero-subtitle centered-text">From iconic Table Mountain to the stunning Cape Peninsula and world-class wineries — discover the magic of Cape Town with our premium guided experiences.</p>
+                    <div class="hero-buttons">
+                        <a href="tours.html" class="btn btn-primary btn-lg"><i class="fas fa-route"></i> Explore Tours</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Indicators removed as they were visually unnecessary -->
+    </section>
+
+    <!-- Enquiry form moved to Contact page -->
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tagline">Why Choose Us</span>
+                <h2 class="section-title">The Tour Da Cape Experience</h2>
+                <p class="section-subtitle">Discover what makes our tours the highest-rated in Cape Town</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mountain fa-3x"></i>
+                    </div>
+                    <h3 class="feature-title">Table Mountain Experts</h3>
+                    <p class="feature-description">Skip the queues with our exclusive Table Mountain cable car access and guided hikes to Lion's Head at sunrise.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-landmark fa-3x"></i>
+                    </div>
+                    <h3 class="feature-title">Heritage & History</h3>
+                    <p class="feature-description">Explore the City Bowl's historic districts and the colorful streets of Bo-Kaap with knowledgeable local guides.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-paw fa-3x"></i>
+                    </div>
+                    <h3 class="feature-title">Wildlife Encounters</h3>
+                    <p class="feature-description">Meet African penguins at Boulders Beach and spot whales from Chapman's Peak during whale season.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-wine-glass-alt fa-3x"></i>
+                    </div>
+                    <h3 class="feature-title">Wine Country Tours</h3>
+                    <p class="feature-description">Experience the finest Cape Winelands estates with private tastings and gourmet food pairings.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Tours Section -->
+    <section class="popular-tours">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tagline">Unforgettable Experiences</span>
+                <h2 class="section-title">Our Premium Cape Town Tours</h2>
+                <p class="section-subtitle">Discover the Mother City's most iconic attractions with our expert local guides</p>
+            </div>
+            <div class="tours-grid">
+                <div class="tour-card">
+                    <div class="tour-image">
+            <picture>
+                <source srcset="optimized-images/cape-point.webp" type="image/webp">
+                <img src="optimized-images/cape-point.jpg" alt="Cape Peninsula & Penguin Colony Tour" class="tour-img">
+            </picture>
+                        <div class="tour-overlay">
+                            <span class="tour-badge">Most Popular</span>
+                        </div>
+                    </div>
+                    <div class="tour-content">
+                        <h3 class="tour-title">Cape Peninsula & Penguin Colony</h3>
+                        <p class="tour-description">Journey to the Cape of Good Hope, meet African penguins at Boulders Beach, and drive the scenic Chapman's Peak.</p>
+                        <div class="tour-meta">
+                            <span class="tour-duration"><i class="fas fa-clock"></i> Full Day</span>
+                            <span class="tour-price"><i class="fas fa-tag"></i> From R1,850</span>
+                        </div>
+                        <a href="tours.html" class="btn btn-outline"><i class="fas fa-map-marker-alt"></i> View Tour</a>
+                    </div>
+                </div>
+                <div class="tour-card">
+                    <div class="tour-image">
+            <picture>
+                <source srcset="optimized-images/wine-tasting.webp" type="image/webp">
+                <img src="optimized-images/wine-tasting.jpg" alt="Stellenbosch Winelands & Franschhoek" class="tour-img">
+            </picture>
+                        <div class="tour-overlay">
+                            <span class="tour-badge">Wine Lovers</span>
+                        </div>
+                    </div>
+                    <div class="tour-content">
+                        <h3 class="tour-title">Stellenbosch & Franschhoek</h3>
+                        <p class="tour-description">Taste award-winning wines in historic Stellenbosch and explore the French heritage of Franschhoek valley.</p>
+                        <div class="tour-meta">
+                            <span class="tour-duration"><i class="fas fa-clock"></i> Full Day</span>
+                            <span class="tour-price"><i class="fas fa-tag"></i> From R2,200</span>
+                        </div>
+                        <a href="tours.html" class="btn btn-outline"><i class="fas fa-wine-glass-alt"></i> View Tour</a>
+                    </div>
+                </div>
+                <div class="tour-card">
+                    <div class="tour-image">
+            <picture>
+                <source srcset="optimized-images/bo-kaap.webp" type="image/webp">
+                <img src="optimized-images/bo-kaap.jpg" alt="Bo-Kaap & City Bowl Heritage" class="tour-img">
+            </picture>
+                        <div class="tour-overlay">
+                            <span class="tour-badge">Cultural</span>
+                        </div>
+                    </div>
+                    <div class="tour-content">
+                        <h3 class="tour-title">City Bowl & Bo-Kaap Heritage</h3>
+                        <p class="tour-description">Explore the colorful Malay Quarter, visit Mandela's prison cell, and learn Cape Town's liberation history.</p>
+                        <div class="tour-meta">
+                            <span class="tour-duration"><i class="fas fa-clock"></i> Full Day</span>
+                            <span class="tour-price"><i class="fas fa-tag"></i> From R1,650</span>
+                        </div>
+                        <a href="tours.html" class="btn btn-outline"><i class="fas fa-landmark"></i> View Tour</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+            <picture>
+                <source srcset="optimized-images/table-mountain.webp" type="image/webp">
+                <img src="optimized-images/table-mountain.jpg" alt="About Tour Da Cape" class="about-img">
+            </picture>
+                </div>
+                <div class="about-text">
+                    <h2>Your Cape Town Insiders</h2>
+                    <p>Welcome to Tour Da Cape, where authentic Mother City experiences come alive. Born and raised in Cape Town, our passionate local guides share the stories, secrets, and spectacular sights that make this city truly magical.</p>
+                    <p>From Table Mountain's ancient sandstone peaks to the penguin colonies of the Cape Peninsula, from the jazz cafes of District Six to the world-renowned vineyards of Stellenbosch - we don't just show you Cape Town, we help you feel its heartbeat.</p>
+                    <a href="about.html" class="btn btn-primary">Meet Our Local Team</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What Guests Say (Animated Reviews) -->
+    <section class="reviews">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tagline">What Guests Say</span>
+                <h2 class="section-title">Loved By Travelers Worldwide</h2>
+            </div>
+            <div class="reviews-marquee" aria-label="Guest reviews scrolling list">
+                <div class="reviews-track">
+                    <div class="review-card"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>“Best day ever at Cape Point!” — Ayesha</p></div>
+                    <div class="review-card"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div><p>“Wine tram insights were superb.” — Daniel</p></div>
+                    <div class="review-card"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>“Penguins! Kids loved it, guides amazing.” — Priya</p></div>
+                    <div class="review-card"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>“Seamless corporate offsite logistics.” — Michael</p></div>
+                    <div class="review-card"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>“Sunrise at Table Mountain = wow.” — Zinhle</p></div>
+                    <div class="review-card"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>“History tour was insightful.” — Jorge</p></div>
+                    <div class="review-card"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div><p>“Gin tasting exceeded expectations.” — Anika</p></div>
+                    <div class="review-card"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>“Great value, premium feel.” — Thomas</p></div>
+                    <div class="review-card"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>“Chapman’s Peak was breathtaking.” — Lindiwe</p></div>
+                    <div class="review-card"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>“Family-friendly and organized.” — Chen</p></div>
+                    <div class="review-card"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>“Loved Bo-Kaap stories.” — Fatima</p></div>
+                    <div class="review-card"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div><p>“Craft beer safari = fun!” — Marco</p></div>
+                    <div class="review-card"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>“Guide made it special.” — Leah</p></div>
+                    <div class="review-card"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>“Flexible, safe, comfy.” — Raj</p></div>
+                    <div class="review-card"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>“Cape Point + penguins!” — Olivia</p></div>
+                    <div class="review-card"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>“Winelands tastings top-notch.” — André</p></div>
+                    <div class="review-card"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>“Easy booking & comms.” — Nandi</p></div>
+                    <div class="review-card"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div><p>“Tasty local food spots.” — Peter</p></div>
+                    <div class="review-card"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>“Memories for a lifetime.” — Sofia</p></div>
+                    <div class="review-card"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>“Highly recommend!” — Musa</p></div>
+                    <!-- Duplicate for seamless loop -->
+                    <div class="review-card"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>“Best day ever at Cape Point!” — Ayesha</p></div>
+                    <div class="review-card"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div><p>“Wine tram insights were superb.” — Daniel</p></div>
+                    <div class="review-card"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>“Penguins! Kids loved it, guides amazing.” — Priya</p></div>
+                    <div class="review-card"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>“Seamless corporate offsite logistics.” — Michael</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content text-center">
+                <h2>Ready for Your Adventure?</h2>
+                <p>Book your tour today and experience the best of Cape Town with Tour Da Cape.</p>
+                <div class="cta-buttons">
+                    <a href="tours.html" class="btn btn-primary">View All Tours</a>
+                    <a href="contact.html" class="btn btn-secondary">Contact Us</a>
+                </div>
+                <div class="qr-code-section" style="margin-top: 40px; padding: 20px; background: #f8fafc; border-radius: 15px; max-width: 300px; margin: 40px auto 0;">
+                    <h3 style="margin-bottom: 15px; color: #0f172a;">Scan to Access Mobile</h3>
+                    <p style="margin-bottom: 15px; color: #64748b;">Quickly access our website on your mobile device</p>
+                    <div class="qr-placeholder" style="background: #e2e8f0; border: 2px dashed #cbd5e1; border-radius: 10px; height: 150px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px;">
+                        <span style="color: #94a3b8;">QR Code Placeholder</span>
+                    </div>
+                    <p style="font-size: 0.9rem; color: #94a3b8; margin: 0;">Replace with actual QR code after deployment</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <span class="logo-text">TOUR DA CAPE</span>
+                    </div>
+                    <p class="footer-description">Luxury tours and unforgettable experiences in Cape Town and beyond.</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="TripAdvisor" class="social-icon"><i class="fab fa-tripadvisor"></i></a>
+                        <a href="#" aria-label="YouTube" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="tours.html">Tours</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Explore</h3>
+                    <ul class="footer-links">
+                    
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-phone"></i> <span>061 621 9784</span></li>
+                        <li><i class="fas fa-envelope"></i> <span>tourdacape1@outlook.com</span></li>
+                        <li><i class="fas fa-map-marker-alt"></i> <span>Cape Town, South Africa</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Tour Da Cape. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            initHeroCarousel();
+        });
+    </script>
+</body>
+</html>
