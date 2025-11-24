@@ -54,25 +54,38 @@ function initContactForm() {
                 message: document.querySelector('textarea[name="message"]').value.trim()
             };
             const statusEl = document.getElementById('formStatus');
-            statusEl.textContent = 'Sending your enquiry...';
-            try {
-                const res = await fetch('/submit-enquiry', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload)
+            // Build email links for multiple providers
+            const ENQUIRY_EMAIL = 'tourdacape1@outlook.com';
+            const subject = encodeURIComponent(`Tour enquiry - ${payload.interest}`);
+            const bodyText = `Name: ${payload.name}\nEmail: ${payload.email}\nPhone: ${payload.phone}\nInterest: ${payload.interest}\n\nMessage:\n${payload.message}`;
+            const body = encodeURIComponent(bodyText);
+            const mailtoHref = `mailto:${ENQUIRY_EMAIL}?subject=${subject}&body=${body}`;
+            const gmailHref = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(ENQUIRY_EMAIL)}&su=${subject}&body=${body}`;
+            const outlookHref = `https://outlook.office.com/mail/deeplink/compose?to=${encodeURIComponent(ENQUIRY_EMAIL)}&subject=${subject}&body=${body}`;
+
+            // Try mailto first (works when a local email client is configured)
+            statusEl.innerHTML = `Opening your email app...<br>If it does not open, use: 
+                <a href="${gmailHref}" target="_blank" rel="noopener">Open Gmail</a> | 
+                <a href="${outlookHref}" target="_blank" rel="noopener">Open Outlook Web</a>
+                <button id="copyEnquiry" type="button" style="margin-left:8px" aria-label="Copy enquiry details">Copy message</button>`;
+            window.location.href = mailtoHref;
+
+            // Copy-to-clipboard fallback button
+            const copyBtn = document.getElementById('copyEnquiry');
+            if (copyBtn) {
+                copyBtn.addEventListener('click', async () => {
+                    try {
+                        await navigator.clipboard.writeText(bodyText);
+                        copyBtn.textContent = 'Copied!';
+                    } catch (err) {
+                        copyBtn.textContent = 'Copy failed';
+                    }
                 });
-                if (res.ok) {
-                    statusEl.textContent = 'Enquiry sent successfully. We will contact you soon.';
-                    contactForm.reset();
-                    showFormSuccess();
-                } else {
-                    const text = await res.text();
-                    statusEl.textContent = `Unable to send at the moment: ${text || 'Please try WhatsApp or email us.'}`;
-                }
-            } catch (err) {
-                statusEl.textContent = 'Network error. Please try WhatsApp or email us.';
-                console.error('Form submit error', err);
             }
+
+            // Provide on-page success feedback and reset form
+            showFormSuccess();
+            contactForm.reset();
         });
     }
 }
