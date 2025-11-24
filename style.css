@@ -1119,6 +1119,15 @@ section {
     color: #059669;
     border: 2px solid #34d399;
 }
+
+/* Tours meta cleanup: hide prices and empty badges */
+.tour-price {
+    display: none !important;
+}
+.tour-duration {
+    display: none !important;
+}
+.tour-meta:empty { display: none; }
 .btn.btn-outline:hover {
     background: #ecfdf5;
     color: #047857;
