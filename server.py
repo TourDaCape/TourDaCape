@@ -13,7 +13,7 @@ SMTP_HOST = os.environ.get("SMTP_HOST", "smtp.office365.com")
 SMTP_PORT = int(os.environ.get("SMTP_PORT", "587"))
 SMTP_USER = os.environ.get("SMTP_USER", os.environ.get("OUTLOOK_USER", ""))
 SMTP_PASS = os.environ.get("SMTP_PASS", os.environ.get("OUTLOOK_PASS", ""))
-TO_EMAIL = os.environ.get("TO_EMAIL", "tour-dacape@outlook.com")
+TO_EMAIL = os.environ.get("TO_EMAIL", "tour-dacap@outlook.com")
 
 class Handler(SimpleHTTPRequestHandler):
     def do_GET(self):
@@ -73,23 +73,22 @@ class Handler(SimpleHTTPRequestHandler):
                 self.wfile.write(b'Missing required fields')
                 return
 
-            # Forward to FormSubmit (AJAX endpoint)
+            # Forward to Web3Forms
             try:
                 import urllib.parse
                 import urllib.request
                 form_fields = {
+                    'access_key': '3de52d64-cd13-46cc-ac98-d4e40ebb7c02',
+                    'email': TO_EMAIL,
                     'name': name,
-                    'email': email,
+                    'email_from': email,
                     'phone': phone,
                     'interest': interest,
-                    'message': message,
-                    '_subject': 'New Tour Da Cape Enquiry',
-                    '_template': 'table',
-                    '_captcha': 'false'
+                    'message': message
                 }
                 data_encoded = urllib.parse.urlencode(form_fields).encode('utf-8')
                 req = urllib.request.Request(
-                    'https://formsubmit.co/ajax/tour-dacape@outlook.com',
+                    'https://api.web3forms.com/submit',
                     data=data_encoded,
                     headers={
                         'Accept': 'application/json',
@@ -98,13 +97,12 @@ class Handler(SimpleHTTPRequestHandler):
                 )
                 with urllib.request.urlopen(req, timeout=10) as resp:
                     status = resp.getcode()
-                    body = resp.read()
                 if 200 <= status < 300:
                     self.send_response(200)
                     self.end_headers()
                     self.wfile.write(b'OK')
                 else:
-                    raise RuntimeError(f'FormSubmit response {status}: {body[:200]}')
+                    raise RuntimeError(f'Web3Forms response {status}')
             except Exception as e:
                 # Fallback: write enquiry to local file
                 try:
