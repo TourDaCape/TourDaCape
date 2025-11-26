@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initWhatsAppChatWidget();
     initCategoryFilter();
     injectWhatsAppFloat();
+    initSubmissionSuccessBanner();
 });
 
 // Mobile Menu Toggle
@@ -39,6 +40,27 @@ function initContactForm() {
     const contactForm = document.getElementById('contactForm');
     
     if (contactForm) {
+        const action = contactForm.getAttribute('action') || '';
+        const provider = contactForm.getAttribute('data-provider') || '';
+        const isFormSubmit = action.includes('formsubmit.co') || provider === 'formsubmit';
+        const isFormSpree = action.includes('formspree.io') || provider === 'formspree';
+        if (isFormSubmit || isFormSpree || /^https?:\/\//.test(action)) {
+            return;
+        }
+        const statusEl = document.getElementById('formStatus');
+        const cfgBoot = (typeof window !== 'undefined' && window.TourDaCapeConfig) ? window.TourDaCapeConfig : {};
+        const isProdBoot = location.hostname === 'tourdacape.github.io';
+        const hasConfiguredEndpointBoot = !!cfgBoot.formspreeEndpoint || !!cfgBoot.workerEndpoint;
+        if (isProdBoot && !hasConfiguredEndpointBoot) {
+            if (statusEl) {
+                statusEl.textContent = 'Form will send via WhatsApp as a fallback.';
+                const link = document.createElement('a');
+                link.href = '#';
+                link.textContent = ' Chat on WhatsApp';
+                link.addEventListener('click', function(e) { e.preventDefault(); if (typeof openWhatsAppChat === 'function') openWhatsAppChat(); });
+                statusEl.appendChild(link);
+            }
+        }
         contactForm.addEventListener('submit', async function(e) {
             e.preventDefault();
             // Validate; if invalid, block submission
@@ -54,38 +76,62 @@ function initContactForm() {
                 message: document.querySelector('textarea[name="message"]').value.trim()
             };
             const statusEl = document.getElementById('formStatus');
-            // Build email links for multiple providers
-            const ENQUIRY_EMAIL = 'tourdacape1@outlook.com';
-            const subject = encodeURIComponent(`Tour enquiry - ${payload.interest}`);
-            const bodyText = `Name: ${payload.name}\nEmail: ${payload.email}\nPhone: ${payload.phone}\nInterest: ${payload.interest}\n\nMessage:\n${payload.message}`;
-            const body = encodeURIComponent(bodyText);
-            const mailtoHref = `mailto:${ENQUIRY_EMAIL}?subject=${subject}&body=${body}`;
-            const gmailHref = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(ENQUIRY_EMAIL)}&su=${subject}&body=${body}`;
-            const outlookHref = `https://outlook.office.com/mail/deeplink/compose?to=${encodeURIComponent(ENQUIRY_EMAIL)}&subject=${subject}&body=${body}`;
-
-            // Try mailto first (works when a local email client is configured)
-            statusEl.innerHTML = `Opening your email app...<br>If it does not open, use: 
-                <a href="${gmailHref}" target="_blank" rel="noopener">Open Gmail</a> | 
-                <a href="${outlookHref}" target="_blank" rel="noopener">Open Outlook Web</a>
-                <button id="copyEnquiry" type="button" style="margin-left:8px" aria-label="Copy enquiry details">Copy message</button>`;
-            window.location.href = mailtoHref;
-
-            // Copy-to-clipboard fallback button
-            const copyBtn = document.getElementById('copyEnquiry');
-            if (copyBtn) {
-                copyBtn.addEventListener('click', async () => {
-                    try {
-                        await navigator.clipboard.writeText(bodyText);
-                        copyBtn.textContent = 'Copied!';
-                    } catch (err) {
-                        copyBtn.textContent = 'Copy failed';
-                    }
-                });
+            statusEl.textContent = 'Sending your enquiry...';
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            if (submitBtn) {
+                submitBtn.disabled = true;
             }
 
-            // Provide on-page success feedback and reset form
-            showFormSuccess();
-            contactForm.reset();
+            const cfg = (typeof window !== 'undefined' && window.TourDaCapeConfig) ? window.TourDaCapeConfig : {};
+            const isProd = location.hostname === 'tourdacape.github.io';
+            const formspreeEndpoint = cfg.formspreeEndpoint;
+            const workerEndpoint = cfg.workerEndpoint;
+            let submitEndpoint = '/submit-enquiry';
+            if (isProd) {
+                if (formspreeEndpoint) {
+                    submitEndpoint = formspreeEndpoint;
+                } else if (workerEndpoint) {
+                    submitEndpoint = workerEndpoint;
+                } else {
+                    const text = `New enquiry\nName: ${payload.name}\nEmail: ${payload.email}\nPhone: ${payload.phone}\nInterest: ${payload.interest}\n\nMessage: ${payload.message}`;
+                    openWhatsAppChatWithText(text);
+                    statusEl.textContent = '';
+                    if (submitBtn) submitBtn.disabled = false;
+                    return;
+                }
+            } else {
+                submitEndpoint = workerEndpoint || '/submit-enquiry';
+            }
+            
+            // Send to backend without exposing company email
+            try {
+                const res = await fetch(submitEndpoint, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (res.ok) {
+                    // Provide on-page success feedback and reset form
+                    showFormSuccess();
+                    contactForm.reset();
+                    statusEl.textContent = '';
+                } else {
+                    const msg = await res.text().catch(() => '');
+                    statusEl.textContent = 'Sorry, we could not send right now. Please try again.';
+                    if (isProd && !formspreeEndpoint && !workerEndpoint) {
+                        console.warn('No endpoint configured. Set window.TourDaCapeConfig.formspreeEndpoint or workerEndpoint in site-config.js');
+                    }
+                    console.error('Send failed:', msg);
+                }
+            } catch (err) {
+                statusEl.textContent = 'Network error. Please check your connection and try again.';
+                console.error('Network error:', err);
+            } finally {
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                }
+            }
         });
     }
 }
@@ -172,8 +218,10 @@ function showFormSuccess() {
     successMessage.style.textAlign = 'center';
     
     // Insert success message before form
-    const contactForm = document.getElementById('contactForm');
-    contactForm.parentNode.insertBefore(successMessage, contactForm);
+    const formEl = document.querySelector('.contact-form');
+    if (formEl && formEl.parentNode) {
+        formEl.parentNode.insertBefore(successMessage, formEl);
+    }
     
     // Remove success message after 5 seconds
     setTimeout(() => {
@@ -181,6 +229,15 @@ function showFormSuccess() {
             successMessage.parentNode.removeChild(successMessage);
         }
     }, 5000);
+}
+
+function initSubmissionSuccessBanner() {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('submitted') === '1') {
+        showFormSuccess();
+        const formEl = document.querySelector('.contact-form');
+        if (formEl) formEl.reset();
+    }
 }
 
 // Popup Handlers
@@ -372,6 +429,12 @@ function openWhatsAppChat() {
 }
 // Ensure global access for inline onclick attributes
 window.openWhatsAppChat = openWhatsAppChat;
+
+function openWhatsAppChatWithText(text) {
+    const prefill = encodeURIComponent(text);
+    const url = `https://wa.me/${whatsappBot.number}?text=${prefill}`;
+    window.open(url, '_blank');
+}
 
 // Floating WhatsApp button (clean, no avatar)
 function injectWhatsAppFloat() {

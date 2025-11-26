@@ -13,7 +13,7 @@ SMTP_HOST = os.environ.get("SMTP_HOST", "smtp.office365.com")
 SMTP_PORT = int(os.environ.get("SMTP_PORT", "587"))
 SMTP_USER = os.environ.get("SMTP_USER", os.environ.get("OUTLOOK_USER", ""))
 SMTP_PASS = os.environ.get("SMTP_PASS", os.environ.get("OUTLOOK_PASS", ""))
-TO_EMAIL = os.environ.get("TO_EMAIL", "tourdacape1@outlook.com")
+TO_EMAIL = os.environ.get("TO_EMAIL", "tour-dacape@outlook.com")
 
 class Handler(SimpleHTTPRequestHandler):
     def do_GET(self):
@@ -73,31 +73,38 @@ class Handler(SimpleHTTPRequestHandler):
                 self.wfile.write(b'Missing required fields')
                 return
 
-            # Compose email
-            mail = EmailMessage()
-            mail['Subject'] = 'New Tour Da Cape Enquiry'
-            mail['From'] = SMTP_USER or TO_EMAIL
-            mail['To'] = TO_EMAIL
-            mail.set_content(
-                f"New enquiry received from Tour Da Cape website.\n\n"
-                f"Name: {name}\n"
-                f"Email: {email}\n"
-                f"Phone: {phone}\n"
-                f"Interest: {interest}\n\n"
-                f"Message:\n{message}\n"
-            )
-
-            # Attempt to send via Outlook SMTP; on failure, store locally and still respond 200
+            # Forward to FormSubmit (AJAX endpoint)
             try:
-                if not SMTP_USER or not SMTP_PASS:
-                    raise RuntimeError('SMTP credentials not configured')
-                with smtplib.SMTP(SMTP_HOST, SMTP_PORT) as server:
-                    server.starttls()
-                    server.login(SMTP_USER, SMTP_PASS)
-                    server.send_message(mail)
-                self.send_response(200)
-                self.end_headers()
-                self.wfile.write(b'OK')
+                import urllib.parse
+                import urllib.request
+                form_fields = {
+                    'name': name,
+                    'email': email,
+                    'phone': phone,
+                    'interest': interest,
+                    'message': message,
+                    '_subject': 'New Tour Da Cape Enquiry',
+                    '_template': 'table',
+                    '_captcha': 'false'
+                }
+                data_encoded = urllib.parse.urlencode(form_fields).encode('utf-8')
+                req = urllib.request.Request(
+                    'https://formsubmit.co/ajax/tour-dacape@outlook.com',
+                    data=data_encoded,
+                    headers={
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    }
+                )
+                with urllib.request.urlopen(req, timeout=10) as resp:
+                    status = resp.getcode()
+                    body = resp.read()
+                if 200 <= status < 300:
+                    self.send_response(200)
+                    self.end_headers()
+                    self.wfile.write(b'OK')
+                else:
+                    raise RuntimeError(f'FormSubmit response {status}: {body[:200]}')
             except Exception as e:
                 # Fallback: write enquiry to local file
                 try:
@@ -118,7 +125,6 @@ class Handler(SimpleHTTPRequestHandler):
                     self.end_headers()
                     self.wfile.write(b'Stored locally; we will contact you soon.')
                 except Exception as write_err:
-                    # If even local storage fails, return 500
                     self.send_response(500)
                     self.end_headers()
                     self.wfile.write(f'Unable to send at the moment: {write_err}'.encode('utf-8'))

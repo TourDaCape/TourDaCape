@@ -5,12 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Tour Da Cape</title>
     <meta name="description" content="Contact Tour Da Cape to plan your premium Cape Town tours and experiences.">
+    <meta name="robots" content="index, follow">
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="apple-touch-icon" href="favicon.png">
     <link rel="stylesheet" href="style.css">
+    <link rel="canonical" href="https://tourdacape.github.io/TourDaCape/contact.html">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Tour Da Cape">
+    <meta property="og:title" content="Contact Us - Tour Da Cape">
+    <meta property="og:description" content="Get in touch to plan premium Cape Town tours and tailored experiences.">
+    <meta property="og:url" content="https://tourdacape.github.io/TourDaCape/contact.html">
+    <meta property="og:image" content="https://tourdacape.github.io/TourDaCape/optimized-images/va-waterfront.jpg">
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact Us - Tour Da Cape">
+    <meta name="twitter:description" content="Get in touch to plan premium Cape Town tours and tailored experiences.">
+    <meta name="twitter:image" content="https://tourdacape.github.io/TourDaCape/optimized-images/va-waterfront.jpg">
 </head>
 <body>
     <!-- Header -->
@@ -62,7 +76,11 @@
                 <h2 class="section-title">Send Us Your Enquiry</h2>
                 <p class="section-subtitle">We respond quickly via email or WhatsApp</p>
             </div>
-            <form id="contactForm" class="contact-form" aria-labelledby="contactForm">
+            <form class="contact-form" action="https://formsubmit.co/tour-dacape@outlook.com" method="POST">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_subject" value="New Tour Da Cape Enquiry">
+                <input type="hidden" name="_next" value="https://tourdacape.github.io/TourDaCape/contact.html?submitted=1">
                 <div class="form-row">
                     <div class="form-group">
                         <label for="name">Name</label>
@@ -142,7 +160,7 @@
                     <h3>Contact Info</h3>
                     <ul class="contact-info">
                         <li><i class="fas fa-phone"></i> <span>061 621 9784</span></li>
-                        <li><i class="fas fa-envelope"></i> <span>tourdacape1@outlook.com</span></li>
+                        <li><i class="fas fa-envelope"></i> <span>Contact via form</span></li>
                         <li><i class="fas fa-map-marker-alt"></i> <span>Cape Town, South Africa</span></li>
                     </ul>
                 </div>
@@ -153,6 +171,7 @@
         </div>
     </footer>
 
+    <script src="site-config.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
