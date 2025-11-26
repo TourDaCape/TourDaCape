@@ -76,29 +76,28 @@
                 <h2 class="section-title">Send Us Your Enquiry</h2>
                 <p class="section-subtitle">We respond quickly via email or WhatsApp</p>
             </div>
-            <form class="contact-form" action="https://formsubmit.co/tour-dacape@outlook.com" method="POST">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_template" value="table">
-                <input type="hidden" name="_subject" value="New Tour Da Cape Enquiry">
-                <input type="hidden" name="_next" value="https://tourdacape.github.io/TourDaCape/contact.html?submitted=1">
+            <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="8610ab3d-d75a-4147-8e55-bfd20a5f1573">
+                <input type="hidden" name="email" value="tour-dacape@outlook.com">
+                <input type="hidden" name="redirect" value="https://tourdacape.github.io/TourDaCape/contact.html?submitted=1">
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" placeholder="Your full name" required>
+                        <label>Name</label>
+                        <input type="text" name="name" required>
                     </div>
                     <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                        <label>Email</label>
+                        <input type="email" name="email_from" required>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="phone">Phone</label>
-                        <input type="tel" id="phone" name="phone" placeholder="Optional">
+                        <label>Phone</label>
+                        <input type="text" name="phone">
                     </div>
                     <div class="form-group">
-                        <label for="interest">Tour Interest</label>
-                        <select id="interest" name="interest">
+                        <label>Tour Interest</label>
+                        <select name="interest">
                             <option value="Cape Peninsula">Cape Peninsula</option>
                             <option value="City Bowl & Bo-Kaap">City Bowl & Bo-Kaap</option>
                             <option value="Winelands">Winelands</option>
@@ -108,13 +107,10 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="6" placeholder="Tell us your dates, preferences, and group size" required></textarea>
+                    <label>Message</label>
+                    <textarea name="message" rows="6" required></textarea>
                 </div>
-                <div class="form-actions">
-                    <button type="submit" class="btn btn-primary">Send Enquiry</button>
-                </div>
-                <div id="formStatus" class="form-status" aria-live="polite"></div>
+                <button type="submit" class="btn btn-primary">Send Enquiry</button>
             </form>
             </div>
         </div>
