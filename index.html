@@ -53,7 +53,7 @@
         <p class="hero-copy">Tours, private transport, accommodation and tailor-made experiences to help you explore the Cape, your way.</p>
         <div class="hero-actions">
           <a class="button button-primary" href="#services"><span aria-hidden="true">▦</span> View Tours <span aria-hidden="true">›</span></a>
-          <a class="button button-light" href="https://wa.me/27616219784" target="_blank" rel="noopener"><span aria-hidden="true">◉</span> Chat on WhatsApp <span aria-hidden="true">›</span></a>
+          <a class="button button-light" href="https://wa.me/27616219784" target="_blank" rel="noopener" onclick="if (typeof openWhatsAppChat === 'function') { event.preventDefault(); openWhatsAppChat(); }"><span aria-hidden="true">◉</span> Chat on WhatsApp <span aria-hidden="true">›</span></a>
         </div>
       </div>
       <div class="hero-highlights" aria-label="Our service areas">
@@ -111,6 +111,31 @@
     </section>
   </main>
 
+
+    <section class="qr-section" aria-labelledby="qr-heading">
+      <div class="qr-inner">
+        <div class="qr-copy">
+          <p class="eyebrow eyebrow-dark">STAY CONNECTED</p>
+          <h2 id="qr-heading">Keep Tour Da Cape Close at Hand</h2>
+          <p>Scan a code with your phone to visit our website or start a WhatsApp enquiry.</p>
+        </div>
+        <div class="qr-card">
+          <a href="https://www.tourdacape.co.za/" target="_blank" rel="noopener">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&amp;data=https%3A%2F%2Fwww.tourdacape.co.za%2F" alt="QR code to visit the Tour Da Cape website" width="150" height="150" loading="lazy">
+          </a>
+          <strong>Visit our website</strong>
+          <a href="https://www.tourdacape.co.za/">www.tourdacape.co.za</a>
+        </div>
+        <div class="qr-card">
+          <a href="https://wa.me/27616219784" target="_blank" rel="noopener">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&amp;data=https%3A%2F%2Fwa.me%2F27616219784" alt="QR code to start a WhatsApp chat with Tour Da Cape" width="150" height="150" loading="lazy">
+          </a>
+          <strong>Chat on WhatsApp</strong>
+          <a href="https://wa.me/27616219784" target="_blank" rel="noopener">Start an enquiry</a>
+        </div>
+      </div>
+    </section>
+
   <footer class="site-footer">
     <div class="footer-main">
       <a class="footer-brand" href="index.html"><img src="assets/tour-da-cape-logo.jpeg" alt="Tour Da Cape original logo" loading="lazy"><span>Tour Da Cape</span></a>
@@ -121,6 +146,8 @@
     <div class="footer-bottom">© 2026 Tour Da Cape. All rights reserved.</div>
   </footer>
 
+  <script src="site-config.js"></script>
+  <script src="script.js"></script>
   <script>
     (function () {
       const toggle = document.querySelector('.menu-toggle');
