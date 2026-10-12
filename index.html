@@ -91,7 +91,7 @@
     <!-- Hero Section with Carousel -->
     <section class="hero fullscreen-hero">
         <div class="hero-carousel">
-            <div class="carousel-slide active">
+            <div class="carousel-slide active"><div class="hero-text text-center">
             <picture>
                 <source srcset="optimized-images/table-mountain.webp" type="image/webp">
                 <img src="optimized-images/table-mountain.jpg" alt="Table Mountain and Cape Town skyline" class="hero-image" loading="eager" fetchpriority="high" decoding="async">
@@ -113,18 +113,34 @@
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <div class="container">
-                <div class="hero-text text-center">
-                    <span class="hero-tagline centered-text">Experience Cape Town Like Never Before</span>
-                    <h1 class="hero-title centered-text">Unforgettable Cape Town Adventures</h1>
-                    <p class="hero-subtitle centered-text">From iconic Table Mountain to the stunning Cape Peninsula and world-class wineries — discover the magic of Cape Town with our premium guided experiences.</p>
-                    <div class="hero-buttons">
-                        <a href="tours.html" class="btn btn-primary btn-lg"><i class="fas fa-route"></i> Explore Tours</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Indicators removed as they were visually unnecessary -->
-    </section>
+               ```html
+<div class="hero-text text-center">
+    <span class="hero-tagline centered-text">
+        EXPLORE · EXPERIENCE · DISCOVER
+    </span>
+
+    <h1 class="hero-title centered-text">
+        Discover Cape Town and Beyond
+    </h1>
+
+    <p class="hero-subtitle centered-text">
+        Tours, transport, accommodation assistance and
+        personalised travel planning to help you explore
+        the Cape your way.
+    </p>
+
+    <div class="hero-buttons">
+        <a href="tours.html" class="btn btn-primary btn-lg">
+            <i class="fas fa-route"></i> Explore Tours
+        </a>
+
+        <a href="#" class="btn btn-secondary btn-lg"
+           onclick="openWhatsAppChat(); return false;">
+            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+        </a>
+    </div>
+</div>
+```
 
     <!-- Enquiry form moved to Contact page -->
 
