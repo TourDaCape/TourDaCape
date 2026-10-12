@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://tourdacape.github.io/TourDaCape/</loc>
+    <loc>https://www.tourdacape.co.za/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://tourdacape.github.io/TourDaCape/about.html</loc>
+    <loc>https://www.tourdacape.co.za/about.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tourdacape.github.io/TourDaCape/contact.html</loc>
+    <loc>https://www.tourdacape.co.za/contact.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tourdacape.github.io/TourDaCape/corporate.html</loc>
+    <loc>https://www.tourdacape.co.za/corporate.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://tourdacape.github.io/TourDaCape/credits.html</loc>
+    <loc>https://www.tourdacape.co.za/credits.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://tourdacape.github.io/TourDaCape/tours.html</loc>
+    <loc>https://www.tourdacape.co.za/tours.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://tourdacape.github.io/TourDaCape/things-to-do.html</loc>
+    <loc>https://www.tourdacape.co.za/things-to-do.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
