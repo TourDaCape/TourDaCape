@@ -209,3 +209,16 @@ img { max-width: 100%; }
   .area-card { grid-template-columns:1fr; }
   .area-image { width:100%; height:auto; min-height:0; aspect-ratio:16 / 9; object-fit:cover; }
 }
+
+/* Accommodation area recommendations */
+.area-recommendation-panel{max-width:1240px;margin:0 auto 28px;display:grid;grid-template-columns:minmax(220px,.75fr) 1.65fr;border:1px solid var(--line);background:#fff;}
+.area-recommendation-intro{padding:28px;background:#f7f5f0;}
+.area-recommendation-intro h3{font:600 25px/1.25 var(--serif);color:var(--ink);margin:8px 0 12px;}
+.area-recommendation-intro p:not(.eyebrow){font-size:14px;line-height:1.75;color:var(--body);margin:0;}
+.area-recommendation-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;}
+.area-recommendation-list article{padding:19px 22px;border-bottom:1px solid var(--line);border-left:1px solid var(--line);}
+.area-recommendation-list h3{font:600 19px/1.25 var(--serif);color:var(--ink);margin:6px 0 7px;}
+.area-recommendation-list p{font-size:13px;line-height:1.65;color:var(--body);margin:0;}
+.recommendation-label{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--teal);}
+@media(max-width:850px){.area-recommendation-panel{grid-template-columns:1fr}.area-recommendation-list article{border-left:0;border-bottom:1px solid var(--line)}}
+@media(max-width:520px){.area-recommendation-list{grid-template-columns:1fr}.area-recommendation-list article{padding:18px}}
