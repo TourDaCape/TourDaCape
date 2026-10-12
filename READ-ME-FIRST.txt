@@ -1,0 +1,19 @@
+TOUR DA CAPE — WEBSITE CONTENT UPDATE
+
+This package keeps the existing homepage design and service-card layout, removes the duplicate “Book or Enquire” header button, and adds dedicated information pages for Transfers, Accommodation and Travel Planning. The four scenic service highlights on the homepage remain clickable shortcuts.
+
+FILES TO UPLOAD TO THE ROOT OF THE GITHUB REPOSITORY
+Upload/replace: index.html, tours.html, about.html, contact.html, transfers.html, accommodation.html, travel-planning.html, style.css, and the image files included here. Keep existing site-config.js and script.js in the repository root. Do not upload into a nested folder. Do not replace the original logo with a different image; the included tour-da-cape-logo.jpeg is copied byte-for-byte from the supplied original.
+
+SERVICE CONTENT
+Tours includes Cape Peninsula, Cape Town City, Winelands, Aquila half-day/full-day safari enquiries with transport, Atlantis Dunes quad biking or transport, Hermanus whale watching, private transfers, and Garden Route/safari planning. Dedicated pages explain transfers, accommodation assistance and itinerary planning. Prices and supplier availability are enquiry-based and are not invented. Safari and whale sightings cannot be guaranteed.
+
+IMAGE NOTE
+The package includes working root-level image paths for the homepage. The Atlantis Dunes card currently uses a general scenic image because no confirmed Atlantis Dunes photograph was supplied. Replace it with a correctly licensed, accurate dunes image when available.
+
+CONTACT
+WhatsApp/phone: +27 61 621 9784 (061 621 9784)
+Email: bookings@tourdacape.co.za
+
+CHECKS
+HTML parse, local links, required image references, removal of the header CTA and CSS brace balance are checked in the package. This package does not commit to GitHub automatically. After uploading, wait for GitHub Pages to deploy and test each tab on the live site.
