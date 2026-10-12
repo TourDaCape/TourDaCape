@@ -1,24 +1,17 @@
-TOUR DA CAPE WEBSITE UPDATE — OCTOBER 2026
+TOUR DA CAPE — CONTENT-RICH PAGE UPDATE
 
-This update refines the existing multi-page website based on your feedback. It does not claim to publish changes to GitHub automatically.
+This package expands the Transfers, Accommodation, Travel Planning and About pages with more practical information for international visitors. It uses Tour Da Cape wording and does not copy Wanderer text.
 
-KEY CHANGES
-- Compact, consistent footer styling across all included pages.
-- Less dark green and less oversized enquiry banners.
-- WhatsApp contact actions are retained on Home and Contact only. Other pages link visitors to Contact.
-- Contact page has a more restrained layout, clearer contact options and a compact enquiry form.
-- Email address is bookings@tourdacape.co.za.
-- The original Tour Da Cape logo file is retained.
-- Existing tour information includes Aquila half-day/full-day enquiries, Atlantis Dunes quad biking/transport, and Hermanus whale-watching/transport.
+IMPORTANT: This package intentionally does NOT include index.html or contact.html. Keep the approved homepage and the current Contact page unchanged.
 
-HOW TO APPLY
-1. Extract this ZIP on your computer.
-2. In the existing TourDaCape GitHub repository, upload and replace the matching HTML and style.css files from this package.
-3. Keep existing files not included in this ZIP (including script.js, site-config.js, CNAME, robots.txt and sitemap.xml). Do not delete the repository contents.
-4. Wait for GitHub Pages to publish, then check each page on desktop and mobile.
+FILES TO REPLACE/ADD IN YOUR EXISTING GITHUB REPOSITORY
+- Replace transfers.html
+- Replace accommodation.html
+- Replace travel-planning.html
+- Replace about.html
+- Replace style.css with the included stylesheet (it preserves existing base styles and adds page-specific styles)
+- Upload included image assets only if they are not already present.
 
-FILES INCLUDED
-index.html, tours.html, transfers.html, accommodation.html, travel-planning.html, about.html, contact.html, style.css, READ-ME-FIRST.txt, and the image assets used by these pages.
+The header uses six main links: Home, Tours & Experiences, Transfers, Accommodation, Travel Planning and Contact. About remains reachable from the footer, not the main navigation. The same compact footer is used across these pages. WhatsApp CTAs are not included on these pages. Email in the shared footer is bookings@tourdacape.co.za.
 
-IMPORTANT
-This is a local update package, not a direct edit to your GitHub repository. Please verify live links and image rendering after publishing.
+Please do not delete other repository files. The files are not published automatically; check the live pages after GitHub Pages updates. Availability, prices and third-party activity details must be confirmed before booking.
