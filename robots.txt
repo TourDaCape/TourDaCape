@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tourdacape.github.io/TourDaCape/sitemap.xml
+Sitemap: https://www.tourdacape.co.za/sitemap.xml
