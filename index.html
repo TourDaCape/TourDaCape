@@ -86,25 +86,30 @@
 </div>
 </section>
 </main>
-<footer class="site-footer"><div class="footer-main"><a class="footer-brand" href="index.html"><img alt="" loading="lazy" src="tour-da-cape-logo.jpeg"/><span>Tour Da Cape</span></a><p>Explore the Cape through tours, transport enquiries and personalised travel planning.</p><nav aria-label="Footer navigation" class="footer-links"><a href="index.html">Home</a><a href="tours.html">Tours &amp; Experiences</a><a href="transfers.html">Transfers</a><a href="accommodation.html">Accommodation</a><a href="travel-planning.html">Travel Planning</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav></div><div class="footer-bottom">© 2026 Tour Da Cape. All rights reserved.</div></footer>
-<script>
-    (function () {
-      const toggle = document.querySelector('.menu-toggle');
-      const nav = document.querySelector('.main-navigation');
-      if (toggle && nav) {
-        toggle.addEventListener('click', function () {
-          const isOpen = nav.classList.toggle('is-open');
-          toggle.setAttribute('aria-expanded', String(isOpen));
-          toggle.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
-        });
-        nav.querySelectorAll('a').forEach(function (link) {
-          link.addEventListener('click', function () {
-            nav.classList.remove('is-open');
-            toggle.setAttribute('aria-expanded', 'false');
-          });
-        });
-      }
-    })();
-  </script>
-</body>
-</html>
+```html
+<footer class="tdc-footer">
+  <div class="tdc-footer__inner">
+    <div class="tdc-footer__brand">
+      <img
+        class="tdc-footer__logo"
+        src="tour-da-cape-logo.jpeg"
+        alt="Tour Da Cape logo"
+      >
+    </div>
+
+    <div class="tdc-footer__credentials">
+      <h2>Company Credentials</h2>
+      <p><span>Registered company</span><strong>TOURDACAPE (PTY) LTD</strong></p>
+      <p><span>Company registration number</span><strong>2026/664321/07</strong></p>
+      <p><span>Income tax reference number</span><strong>9702224206</strong></p>
+      <div class="tdc-footer__bee">
+        <span class="tdc-footer__bee-mark" aria-hidden="true">✓</span>
+        <strong>B-BBEE Level 1 Contributor</strong>
+      </div>
+    </div>
+  </div>
+  <div class="tdc-footer__bottom">
+    <p>© 2026 Tour Da Cape. All rights reserved.</p>
+  </div>
+</footer>
+```
