@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
@@ -17,6 +16,113 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="style.css" rel="stylesheet"/>
+
+<style>
+/* Footer layout refinement only. Retains the site's existing colours and typography. */
+.site-footer .footer-main {
+  width: min(1080px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 32px 0;
+  display: grid !important;
+  grid-template-columns: 180px minmax(0, 1fr);
+  align-items: center;
+  gap: 42px;
+}
+.site-footer .footer-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.site-footer .footer-brand img {
+  display: block;
+  width: 160px !important;
+  height: 130px !important;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+.site-footer .footer-credentials {
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+.site-footer .footer-credentials h2 {
+  margin: 0 0 16px !important;
+  padding: 0;
+  text-align: left !important;
+  font-size: 21px;
+  line-height: 1.35;
+}
+.site-footer .footer-credentials p {
+  display: inline-flex;
+  vertical-align: top;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  width: 32%;
+  margin: 0 1% 0 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  font-size: 13px;
+  line-height: 1.45;
+}
+.site-footer .footer-credentials p span {
+  opacity: .78;
+}
+.site-footer .footer-credentials p strong {
+  display: block;
+  text-align: left !important;
+  overflow-wrap: anywhere;
+  font-size: 14px;
+  font-weight: 600;
+}
+.site-footer .footer-credentials .footer-bee {
+  display: block;
+  width: auto;
+  margin: 18px 0 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+}
+.site-footer .footer-bottom {
+  padding: 15px 20px;
+  text-align: center;
+}
+@media (max-width: 680px) {
+  .site-footer .footer-main {
+    width: calc(100% - 36px);
+    padding: 26px 0;
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .site-footer .footer-brand img {
+    width: 135px !important;
+    height: 100px !important;
+  }
+  .site-footer .footer-credentials h2 {
+    text-align: center !important;
+    font-size: 20px;
+  }
+  .site-footer .footer-credentials p {
+    display: block;
+    width: 100%;
+    margin: 0 0 12px !important;
+  }
+  .site-footer .footer-credentials p span,
+  .site-footer .footer-credentials p strong {
+    display: block;
+    text-align: left !important;
+  }
+  .site-footer .footer-credentials .footer-bee {
+    margin-top: 12px !important;
+  }
+}
+</style>
+
 </head>
 <body>
 <header class="site-header"><div class="header-inner"><a aria-label="Tour Da Cape home" class="brand" href="index.html"><img alt="Tour Da Cape original emblem" class="brand-emblem" src="tour-da-cape-logo.jpeg"/><span class="brand-wordmark"><span class="brand-name">TOUR DA CAPE</span><span class="brand-tag">TOURS • TRANSFERS • EXPERIENCES</span></span></a><button aria-controls="main-navigation" aria-expanded="false" aria-label="Open navigation" class="menu-toggle" type="button"><span></span><span></span><span></span></button><nav aria-label="Main navigation" class="main-navigation" id="main-navigation"><a aria-current="page" href="index.html">Home</a><a href="tours.html">Tours &amp; Experiences</a><a href="transfers.html">Transfers</a><a href="accommodation.html">Accommodation</a><a href="travel-planning.html">Travel Planning</a><a href="contact.html">Contact</a></nav></div></header>
@@ -25,7 +131,7 @@
 <img alt="Cape Town, Table Mountain, blue ocean and a scenic coastal road" class="hero-photo" fetchpriority="high" src="cape-town-hero.jpg"/>
 <div aria-hidden="true" class="hero-shade"></div>
 <div class="hero-inner">
-<p class="eyebrow">EXPLORE  •  EXPERIENCE  •  DISCOVER</p>
+<p class="eyebrow">EXPLORE  •  EXPERIENCE  •  DISCOVER</p>
 <h1>Discover Cape Town<br/>and Beyond</h1>
 <p class="hero-copy">Tours, private transport, accommodation and tailor-made experiences to help you explore the Cape, your way.</p>
 <div class="hero-actions">
@@ -86,30 +192,39 @@
 </div>
 </section>
 </main>
-```html
-<footer class="tdc-footer">
-  <div class="tdc-footer__inner">
-    <div class="tdc-footer__brand">
-      <img
-        class="tdc-footer__logo"
-        src="tour-da-cape-logo.jpeg"
-        alt="Tour Da Cape logo"
-      >
-    </div>
-
-    <div class="tdc-footer__credentials">
+<footer class="site-footer">
+  <div class="footer-main">
+    <a class="footer-brand" href="index.html" aria-label="Tour Da Cape home">
+      <img alt="Tour Da Cape original emblem" loading="lazy" src="tour-da-cape-logo.jpeg"/>
+    </a>
+    <div class="footer-credentials">
       <h2>Company Credentials</h2>
       <p><span>Registered company</span><strong>TOURDACAPE (PTY) LTD</strong></p>
       <p><span>Company registration number</span><strong>2026/664321/07</strong></p>
       <p><span>Income tax reference number</span><strong>9702224206</strong></p>
-      <div class="tdc-footer__bee">
-        <span class="tdc-footer__bee-mark" aria-hidden="true">✓</span>
-        <strong>B-BBEE Level 1 Contributor</strong>
-      </div>
+      <p class="footer-bee"><strong>B-BBEE Level 1 Contributor</strong></p>
     </div>
   </div>
-  <div class="tdc-footer__bottom">
-    <p>© 2026 Tour Da Cape. All rights reserved.</p>
-  </div>
+  <div class="footer-bottom">© 2026 Tour Da Cape. All rights reserved.</div>
 </footer>
-```
+<script>
+    (function () {
+      const toggle = document.querySelector('.menu-toggle');
+      const nav = document.querySelector('.main-navigation');
+      if (toggle && nav) {
+        toggle.addEventListener('click', function () {
+          const isOpen = nav.classList.toggle('is-open');
+          toggle.setAttribute('aria-expanded', String(isOpen));
+          toggle.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
+        });
+        nav.querySelectorAll('a').forEach(function (link) {
+          link.addEventListener('click', function () {
+            nav.classList.remove('is-open');
+            toggle.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
