@@ -1,17 +1,31 @@
-TOUR DA CAPE — CONTENT-RICH PAGE UPDATE
+TOUR DA CAPE — COORDINATED WEBSITE BUILD
 
-This package expands the Transfers, Accommodation, Travel Planning and About pages with more practical information for international visitors. It uses Tour Da Cape wording and does not copy Wanderer text.
+This package is designed to be uploaded into the ROOT of your existing GitHub Pages repository. It includes a coordinated set of pages and assets.
 
-IMPORTANT: This package intentionally does NOT include index.html or contact.html. Keep the approved homepage and the current Contact page unchanged.
+FILES INCLUDED: index.html, tours.html, transfers.html, accommodation.html, travel-planning.html, about.html, contact.html, style.css and the image assets listed in the archive.
 
-FILES TO REPLACE/ADD IN YOUR EXISTING GITHUB REPOSITORY
-- Replace transfers.html
-- Replace accommodation.html
-- Replace travel-planning.html
-- Replace about.html
-- Replace style.css with the included stylesheet (it preserves existing base styles and adds page-specific styles)
-- Upload included image assets only if they are not already present.
+DESIGN / CONTENT DECISIONS APPLIED
+- Six main navigation items: Home, Tours & Experiences, Transfers, Accommodation, Travel Planning, Contact. About remains accessible from the footer, not the main navigation.
+- One consistent compact footer across all pages. The footer intentionally omits phone, email and WhatsApp so these are not repeated on every tab.
+- WhatsApp appears on Home only where already part of the homepage and on Contact; service pages direct enquiries to Contact.
+- Correct booking email: bookings@tourdacape.co.za. Phone on Contact: 061 621 9784.
+- Tours include Aquila half-day/full-day enquiries, Atlantis Dunes quad biking and/or transport, and Hermanus whale-watching with transport enquiry.
+- Accommodation includes area comparisons, accommodation-type guidance, traveller needs, FAQs and how stays can connect with tours and transport. Specific properties and availability are not claimed.
+- Transfers includes airport journey information, route types, enquiry checklist, booking steps and FAQs.
+- Travel Planning includes destination highlights and flexible sample 3-, 5- and 7+-day itinerary frameworks.
+- No fabricated testimonials, awards, prices, confirmed hotel partnerships or guarantees.
+- The homepage hero and core homepage content are retained from the previously approved design; navigation/footer are aligned to the site-wide decisions.
 
-The header uses six main links: Home, Tours & Experiences, Transfers, Accommodation, Travel Planning and Contact. About remains reachable from the footer, not the main navigation. The same compact footer is used across these pages. WhatsApp CTAs are not included on these pages. Email in the shared footer is bookings@tourdacape.co.za.
+UPLOAD
+1. Download and extract this ZIP.
+2. Upload the included files to the ROOT of the existing repository, replacing matching files.
+3. Do not delete unrelated repository files.
+4. Wait for GitHub Pages to publish, then test every navigation link and page on desktop and mobile.
 
-Please do not delete other repository files. The files are not published automatically; check the live pages after GitHub Pages updates. Availability, prices and third-party activity details must be confirmed before booking.
+IMPORTANT
+This is a static website package, not a direct GitHub deployment. It has been checked locally for page links, image references and consistent navigation/footer. The published website still needs a live-browser check after upload. Prices, activity schedules, third-party arrangements and availability must be confirmed before booking.
+
+IMAGE FIX INCLUDED
+- Travel Planning and other content images now use consistent image frames with object-fit: cover so they do not stretch out of proportion.
+- Hero images use a 4:3 frame on desktop and a wider frame on mobile; cards use a 3:2 frame on desktop.
+- This package is not deployed to GitHub automatically. Upload the included files to your existing repository root to publish.
