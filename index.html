@@ -1,352 +1,144 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tour Da Cape | Cape Town Tours, Transfers &amp; Travel Planning</title>
-    <meta name="description" content="Explore Cape Town and the surrounding region with Tour Da Cape. Enquire about tours, transport, transfers, accommodation assistance and personalised travel planning.">
-    <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#174b4b">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="favicon.ico" sizes="any">
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="apple-touch-icon" href="favicon.png">
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="canonical" href="https://www.tourdacape.co.za/">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Tour Da Cape">
-    <meta property="og:title" content="Tour Da Cape - Premium Cape Town Tours & Experiences">
-    <meta property="og:description" content="Explore Cape Town and the surrounding region with Tour Da Cape. Enquire about tours, transport, transfers, accommodation assistance and personalised travel planning.">
-    <meta property="og:url" content="https://www.tourdacape.co.za/">
-    <meta property="og:image" content="https://www.tourdacape.co.za/optimized-images/table-mountain.jpg">
-
-    <!-- Twitter Cards -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Tour Da Cape - Premium Cape Town Tours & Experiences">
-    <meta name="twitter:description" content="Explore Cape Town and the surrounding region with Tour Da Cape. Enquire about tours, transport, transfers, accommodation assistance and personalised travel planning.">
-    <meta name="twitter:image" content="https://www.tourdacape.co.za/optimized-images/table-mountain.jpg">
-
-    <!-- JSON-LD Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Tour Da Cape",
-      "url": "https://www.tourdacape.co.za/",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://www.tourdacape.co.za/?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Tour Da Cape",
-      "url": "https://www.tourdacape.co.za/",
-      "logo": "https://www.tourdacape.co.za/favicon.png"
-    }
-    </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tour Da Cape | Tours, Transfers & Travel Planning</title>
+  <meta name="description" content="Explore Cape Town and the surrounding region with Tour Da Cape. Enquire about tours, transport, accommodation assistance and personalised travel planning.">
+  <meta name="theme-color" content="#003f3b">
+  <link rel="canonical" href="https://www.tourdacape.co.za/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Tour Da Cape">
+  <meta property="og:title" content="Tour Da Cape | Discover Cape Town and Beyond">
+  <meta property="og:description" content="Tours, transport, accommodation assistance and personalised travel planning.">
+  <meta property="og:url" content="https://www.tourdacape.co.za/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="main-header">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <a href="index.html" class="logo-text">TOUR DA CAPE</a>
-                </div>
-                <nav class="main-nav">
-                    <ul class="nav-menu">
-                        <li><a href="index.html" class="nav-link active">Home</a></li>
-                        <li><a href="about.html" class="nav-link">About</a></li>
-                        <li><a href="tours.html" class="nav-link">Tours</a></li>
-                        <li><a href="contact.html" class="nav-link">Contact</a></li>
-                    </ul>
-                    <div class="mobile-menu-toggle">
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                    </div>
-                </nav>
-                <div class="header-cta">
-                    <a href="#" class="btn btn-primary" onclick="openWhatsAppChat(); return false;"><i class="fas fa-calendar-alt"></i> Book Now</a>
-                </div>
-            </div>
-        </div>
-    </header>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Tour Da Cape home">
+        <img src="assets/tour-da-cape-logo.jpeg" alt="Original Tour Da Cape circular emblem" class="brand-emblem">
+        <span class="brand-wordmark">
+          <span class="brand-name">TOUR DA CAPE</span>
+          <span class="brand-tag">TOURS&nbsp; • &nbsp;TRANSFERS&nbsp; • &nbsp;EXPERIENCES</span>
+        </span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="main-navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="main-navigation" class="main-navigation" aria-label="Main navigation">
+        <a class="nav-link active" href="#home">Home</a>
+        <a class="nav-link" href="#services">Tours</a>
+        <a class="nav-link" href="#transfers">Transfers</a>
+        <a class="nav-link" href="#accommodation">Accommodation</a>
+        <a class="nav-link" href="#travel-planning">Travel Planning</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </nav>
+      <a class="header-cta" href="contact.html"><span aria-hidden="true">▦</span> Book or Enquire <span aria-hidden="true">›</span></a>
+    </div>
+  </header>
 
-    <!-- Hero Section with Carousel -->
-    <section class="hero fullscreen-hero" aria-label="Discover Cape Town">
-        <div class="hero-carousel" aria-hidden="true">
-            <div class="carousel-slide active">
-                <picture>
-                    <source srcset="optimized-images/table-mountain.webp" type="image/webp">
-                    <img src="optimized-images/table-mountain.jpg" alt="" class="hero-image" loading="eager" fetchpriority="high" decoding="async">
-                </picture>
-            </div>
-            <div class="carousel-slide">
-                <picture>
-                    <source srcset="optimized-images/cape-point.webp" type="image/webp">
-                    <img src="optimized-images/cape-point.jpg" alt="" class="hero-image" loading="lazy" decoding="async">
-                </picture>
-            </div>
-            <div class="carousel-slide">
-                <picture>
-                    <source srcset="optimized-images/wine-tasting.webp" type="image/webp">
-                    <img src="optimized-images/wine-tasting.jpg" alt="" class="hero-image" loading="lazy" decoding="async">
-                </picture>
-            </div>
+  <main>
+    <section class="hero" id="home" aria-label="Discover Cape Town and beyond">
+      <img class="hero-photo" src="assets/cape-town-hero.jpg" alt="Cape Town, Table Mountain, blue ocean and a scenic coastal road" fetchpriority="high">
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <p class="eyebrow">EXPLORE&nbsp; • &nbsp;EXPERIENCE&nbsp; • &nbsp;DISCOVER</p>
+        <h1>Discover Cape Town<br>and Beyond</h1>
+        <p class="hero-copy">Tours, private transport, accommodation and tailor-made experiences to help you explore the Cape, your way.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#services"><span aria-hidden="true">▦</span> View Tours <span aria-hidden="true">›</span></a>
+          <a class="button button-light" href="https://wa.me/27616219784" target="_blank" rel="noopener"><span aria-hidden="true">◉</span> Chat on WhatsApp <span aria-hidden="true">›</span></a>
         </div>
-        <div class="hero-overlay" aria-hidden="true"></div>
-        <div class="hero-content">
-            <div class="container">
-                <div class="hero-text text-center">
-                    <span class="hero-tagline centered-text">EXPLORE · EXPERIENCE · DISCOVER</span>
-                    <h1 class="hero-title centered-text">Discover Cape Town and Beyond</h1>
-                    <p class="hero-subtitle centered-text">Tours, transport, accommodation assistance and personalised travel planning to help you explore the Cape your way.</p>
-                    <div class="hero-buttons">
-                        <a href="tours.html" class="btn btn-primary btn-lg"><i class="fas fa-route" aria-hidden="true"></i> Explore Tours</a>
-                        <a href="#" class="btn btn-secondary btn-lg" onclick="openWhatsAppChat(); return false;"><i class="fab fa-whatsapp" aria-hidden="true"></i> Chat on WhatsApp</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+      </div>
+      <div class="hero-highlights" aria-label="Our service areas">
+        <a href="#services"><span class="highlight-icon">⌖</span><span>ICONIC<br>DESTINATIONS</span></a>
+        <a href="#transfers"><span class="highlight-icon">🚘</span><span>PRIVATE TRANSPORT<br>&amp; TRANSFERS</span></a>
+        <a href="#accommodation"><span class="highlight-icon">▰</span><span>ACCOMMODATION<br>ASSISTANCE</span></a>
+        <a href="#travel-planning"><span class="highlight-icon">☼</span><span>TAILOR-MADE<br>ITINERARIES</span></a>
+      </div>
     </section>
 
-    <!-- Enquiry form moved to Contact page -->
-
-    <!-- Services Section -->
-    <section class="features" id="services">
-        <div class="container">
-            <div class="section-header text-center">
-                <span class="section-tagline">Explore with Tour Da Cape</span>
-                <h2 class="section-title">Discover Our Services</h2>
-                <p class="section-subtitle">From local sightseeing to transport and travel planning, tell us what you have in mind and enquire about arrangements suited to your trip.</p>
-            </div>
-            <div class="features-grid">
-                <article class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-map-marked-alt fa-3x" aria-hidden="true"></i></div>
-                    <h3 class="feature-title">Cape Peninsula Tours</h3>
-                    <p class="feature-description">Explore Cape Point, Boulders Beach, Chapman's Peak and the Cape's spectacular coastline.</p>
-                    <a href="tours.html" class="btn btn-outline">Explore Tours</a>
-                </article>
-                <article class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-city fa-3x" aria-hidden="true"></i></div>
-                    <h3 class="feature-title">Cape Town &amp; Culture</h3>
-                    <p class="feature-description">Discover city highlights, Bo-Kaap, heritage attractions and scenic viewpoints.</p>
-                    <a href="tours.html" class="btn btn-outline">Discover the City</a>
-                </article>
-                <article class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-wine-glass-alt fa-3x" aria-hidden="true"></i></div>
-                    <h3 class="feature-title">Winelands &amp; Day Trips</h3>
-                    <p class="feature-description">Enquire about Stellenbosch, Franschhoek and scenic day trips based on your interests.</p>
-                    <a href="tours.html" class="btn btn-outline">Explore Day Trips</a>
-                </article>
-                <article class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-car fa-3x" aria-hidden="true"></i></div>
-                    <h3 class="feature-title">Transport &amp; Transfers</h3>
-                    <p class="feature-description">Ask about airport transfers, group travel, private transport and corporate transport needs.</p>
-                    <a href="contact.html" class="btn btn-outline">Request a Quote</a>
-                </article>
-                <article class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-suitcase-rolling fa-3x" aria-hidden="true"></i></div>
-                    <h3 class="feature-title">Travel &amp; Accommodation Planning</h3>
-                    <p class="feature-description">Share your dates, interests and accommodation needs to discuss suitable travel arrangements.</p>
-                    <a href="contact.html" class="btn btn-outline">Plan Your Trip</a>
-                </article>
-            </div>
+    <section class="services-section" id="services">
+      <div class="section-top">
+        <div>
+          <p class="eyebrow eyebrow-dark">EXPLORE OUR SERVICES</p>
+          <h2>Discover Our Experiences</h2>
         </div>
+        <a class="view-all" href="tours.html">View All Tours <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="service-grid">
+        <article class="service-card">
+          <a class="service-image-link" href="tours.html" aria-label="Explore Cape Peninsula Tours"><img src="assets/cape-peninsula.jpg" alt="Cape Peninsula coastal cliffs and ocean" loading="lazy"></a>
+          <div class="service-card-copy"><h3>Cape Peninsula Tours</h3><p>Cape Point, Boulders Beach, Chapman's Peak and more.</p><a class="round-arrow" href="tours.html" aria-label="View Cape Peninsula tours">→</a></div>
+        </article>
+        <article class="service-card">
+          <a class="service-image-link" href="tours.html" aria-label="Explore Cape Town City Tours"><img src="assets/cape-town-city.jpg" alt="Colourful Bo-Kaap houses in Cape Town" loading="lazy"></a>
+          <div class="service-card-copy"><h3>Cape Town City Tours</h3><p>Culture, history, scenic viewpoints and local experiences.</p><a class="round-arrow" href="tours.html" aria-label="View Cape Town city tours">→</a></div>
+        </article>
+        <article class="service-card">
+          <a class="service-image-link" href="tours.html" aria-label="Explore Winelands Experiences"><img src="assets/winelands.jpg" alt="Cape Winelands vineyards and mountains" loading="lazy"></a>
+          <div class="service-card-copy"><h3>Winelands Experiences</h3><p>Stellenbosch, Franschhoek and world-class wine estates.</p><a class="round-arrow" href="tours.html" aria-label="View Winelands experiences">→</a></div>
+        </article>
+        <article class="service-card" id="transfers">
+          <a class="service-image-link" href="contact.html" aria-label="Enquire about transfers and private transport"><img src="assets/transfers.jpg" alt="Passenger van on a scenic Cape road" loading="lazy"></a>
+          <div class="service-card-copy"><h3>Transfers &amp; Private Transport</h3><p>Airport transfers, day hire, group and corporate transport.</p><a class="round-arrow" href="contact.html" aria-label="Enquire about transfers">→</a></div>
+        </article>
+        <article class="service-card">
+          <a class="service-image-link" href="contact.html" aria-label="Enquire about safari and Garden Route planning"><img src="assets/safari-garden-route.jpg" alt="Safari vehicle and wildlife at sunset" loading="lazy"></a>
+          <div class="service-card-copy"><h3>Safari &amp; Garden Route</h3><p>Ask us about safari trips, Garden Route journeys and extended travel experiences.</p><a class="round-arrow" href="contact.html" aria-label="Enquire about extended travel">→</a></div>
+        </article>
+      </div>
     </section>
 
-    <!-- Popular Tours Section -->
-    <section class="popular-tours">
-        <div class="container">
-            <div class="section-header text-center">
-                <span class="section-tagline">Unforgettable Experiences</span>
-                <h2 class="section-title">Our Premium Cape Town Tours</h2>
-                <p class="section-subtitle">Explore Cape Town highlights and enquire about experiences for your visit</p>
-            </div>
-            <div class="tours-grid">
-                <div class="tour-card">
-                    <div class="tour-image">
-            <picture>
-                <source srcset="optimized-images/cape-point.webp" type="image/webp">
-                <img src="optimized-images/cape-point.jpg" alt="Cape Peninsula & Penguin Colony Tour" class="tour-img">
-            </picture>
-                        <div class="tour-overlay">
-                            <span class="tour-badge">Most Popular</span>
-                        </div>
-                    </div>
-                    <div class="tour-content">
-                        <h3 class="tour-title">Cape Peninsula & Penguin Colony</h3>
-                        <p class="tour-description">Explore Cape Point, Boulders Beach and the scenic Chapman's Peak coastline. Stops and arrangements can be discussed when you enquire.</p>
-                        
-                        <a href="tours.html" class="btn btn-outline"><i class="fas fa-map-marker-alt"></i> View Tour</a>
-                    </div>
-                </div>
-                <div class="tour-card">
-                    <div class="tour-image">
-            <picture>
-                <source srcset="optimized-images/wine-tasting.webp" type="image/webp">
-                <img src="optimized-images/wine-tasting.jpg" alt="Stellenbosch Winelands & Franschhoek" class="tour-img">
-            </picture>
-                        <div class="tour-overlay">
-                            <span class="tour-badge">Wine Lovers</span>
-                        </div>
-                    </div>
-                    <div class="tour-content">
-                        <h3 class="tour-title">Stellenbosch & Franschhoek</h3>
-                        <p class="tour-description">Discover the scenery and heritage of Stellenbosch and Franschhoek, with visits arranged to suit your plans.</p>
-                        
-                        <a href="tours.html" class="btn btn-outline"><i class="fas fa-wine-glass-alt"></i> View Tour</a>
-                    </div>
-                </div>
-                <div class="tour-card">
-                    <div class="tour-image">
-            <picture>
-                <source srcset="optimized-images/bo-kaap.webp" type="image/webp">
-                <img src="optimized-images/bo-kaap.jpg" alt="Bo-Kaap & City Bowl Heritage" class="tour-img">
-            </picture>
-                        <div class="tour-overlay">
-                            <span class="tour-badge">Cultural</span>
-                        </div>
-                    </div>
-                    <div class="tour-content">
-                        <h3 class="tour-title">City Bowl & Bo-Kaap Heritage</h3>
-                        <p class="tour-description">Explore the colourful streets of Bo-Kaap and learn about Cape Town's cultural and heritage landmarks.</p>
-                        
-                        <a href="tours.html" class="btn btn-outline"><i class="fas fa-landmark"></i> View Tour</a>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
+    <section class="planning-section" id="accommodation">
+      <div class="planning-copy">
+        <p class="eyebrow eyebrow-dark">MAKE IT YOUR OWN</p>
+        <h2>More Than a Day Out</h2>
+        <p>Tell us what you would like from your Cape visit. We can discuss sightseeing, transport, accommodation assistance and travel-planning requirements, then confirm what can be arranged for your dates.</p>
+        <a class="button button-primary" href="contact.html">Discuss Your Trip <span aria-hidden="true">›</span></a>
+      </div>
+      <div class="planning-detail" id="travel-planning">
+        <div class="detail-item"><span>01</span><div><h3>Share your plans</h3><p>Let us know your dates, group size and interests.</p></div></div>
+        <div class="detail-item"><span>02</span><div><h3>Discuss your options</h3><p>Tell us whether you need tours, transport or accommodation assistance.</p></div></div>
+        <div class="detail-item"><span>03</span><div><h3>Confirm the details</h3><p>Services, availability and pricing are confirmed before booking.</p></div></div>
+      </div>
     </section>
+  </main>
 
-    <!-- About Section -->
-    <section class="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-image">
-            <picture>
-                <source srcset="optimized-images/table-mountain.webp" type="image/webp">
-                <img src="optimized-images/table-mountain.jpg" alt="About Tour Da Cape" class="about-img">
-            </picture>
-                </div>
-                <div class="about-text">
-                    <h2>Your Cape Town Insiders</h2>
-                    <p>Welcome to Tour Da Cape. We help travellers explore Cape Town and the surrounding region through sightseeing, transport enquiries and travel-planning assistance.</p>
-                    <p>From the Cape Peninsula and city landmarks to the Winelands, tell us what you would like to experience and we can discuss suitable options for your trip.</p>
-                    <a href="about.html" class="btn btn-primary">Learn More About Us</a>
-                </div>
-            </div>
-        </div>
-    </section>
+  <footer class="site-footer">
+    <div class="footer-main">
+      <a class="footer-brand" href="index.html"><img src="assets/tour-da-cape-logo.jpeg" alt="Tour Da Cape original logo" loading="lazy"><span>Tour Da Cape</span></a>
+      <p>Explore the Cape through tours, transport enquiries and personalised travel planning.</p>
+      <div class="footer-links"><a href="tours.html">Tours</a><a href="#transfers">Transfers</a><a href="#accommodation">Accommodation</a><a href="#travel-planning">Travel Planning</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+      <p class="footer-contact">Cape Town, South Africa · <a href="tel:+27616219784">061 621 9784</a></p>
+    </div>
+    <div class="footer-bottom">© 2026 Tour Da Cape. All rights reserved.</div>
+  </footer>
 
-    <!-- Travel Planning Section -->
-    <section class="cta-section" id="travel-planning">
-        <div class="container">
-            <div class="cta-content text-center">
-                <span class="section-tagline">Your Cape Trip, Your Way</span>
-                <h2>Let's Plan Your Cape Experience</h2>
-                <p>Tell us when you are travelling, what you would like to see and whether you need transport or accommodation assistance. Contact us to discuss your requirements and request a quote.</p>
-                <div class="cta-buttons">
-                    <a href="tours.html" class="btn btn-primary">Explore Tours</a>
-                    <a href="contact.html" class="btn btn-secondary">Plan Your Trip</a>
-                    <a href="#" class="btn btn-secondary" onclick="openWhatsAppChat(); return false;"><i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp Us</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content text-center">
-                <h2>Ready for Your Adventure?</h2>
-                <p>Book your tour today and experience the best of Cape Town with Tour Da Cape.</p>
-                <div class="cta-buttons">
-                    <a href="tours.html" class="btn btn-primary">View All Tours</a>
-                    <a href="contact.html" class="btn btn-secondary">Contact Us</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="main-footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-column">
-                    <div class="footer-logo">
-                        <span class="logo-text">TOUR DA CAPE</span>
-                    </div>
-                                <p class="footer-description">Tours, transport and travel-planning assistance in Cape Town and beyond.</p>
-                                <div class="footer-qr">
-                                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https%3A%2F%2Fwww.tourdacape.co.za%2F" alt="Scan to visit www.tourdacape.co.za" loading="lazy" width="160" height="160">
-                                    <div class="footer-qr-caption">Scan to visit our site</div>
-                                </div>
-                    <div class="social-icons">
-                        <a href="#" aria-label="Facebook" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" aria-label="Instagram" class="social-icon"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="TripAdvisor" class="social-icon"><i class="fab fa-tripadvisor"></i></a>
-                        <a href="#" aria-label="YouTube" class="social-icon"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="tours.html">Tours</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Explore</h3>
-                    <ul class="footer-links">
-                    
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Contact Info</h3>
-                    <ul class="contact-info">
-                        <li><i class="fas fa-phone"></i> <span>061 621 9784</span></li>
-                        <li><i class="fas fa-envelope"></i> <span>Contact via form</span></li>
-                        <li><i class="fas fa-map-marker-alt"></i> <span>Cape Town, South Africa</span></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Tour Da Cape. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- JavaScript -->
-    <script src="site-config.js"></script>
-    <script src="script.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            initHeroCarousel();
+  <script>
+    (function () {
+      const toggle = document.querySelector('.menu-toggle');
+      const nav = document.querySelector('.main-navigation');
+      if (toggle && nav) {
+        toggle.addEventListener('click', function () {
+          const isOpen = nav.classList.toggle('is-open');
+          toggle.setAttribute('aria-expanded', String(isOpen));
+          toggle.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
         });
-    </script>
+        nav.querySelectorAll('a').forEach(function (link) {
+          link.addEventListener('click', function () {
+            nav.classList.remove('is-open');
+            toggle.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
+    })();
+  </script>
 </body>
 </html>
