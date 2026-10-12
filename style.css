@@ -76,20 +76,3 @@ img{display:block;max-width:100%}
 @media(max-width:600px){.header-inner{padding:10px 15px;gap:10px}.brand-emblem{width:40px;height:40px}.brand-name{font-size:20px;letter-spacing:1px}.brand-tag{font-size:7px;letter-spacing:1px}.header-cta{padding:0 10px;gap:6px;font-size:11px}.hero{height:650px;min-height:650px}.hero-photo{object-position:60% center}.hero-shade{background:linear-gradient(90deg,rgba(255,255,255,.88),rgba(255,255,255,.60) 65%,rgba(255,255,255,.20))}.hero-inner{padding:62px 22px 180px}.hero h1{font-size:clamp(39px,11vw,53px);letter-spacing:-1.6px}.hero-copy{font-size:16px;max-width:450px}.hero-actions{gap:10px}.button{min-height:48px;padding:0 15px;font-size:12px}.hero-highlights{grid-template-columns:repeat(2,minmax(0,1fr));padding:8px 12px}.hero-highlights a{font-size:10px;gap:8px;padding:5px}.highlight-icon{font-size:23px;min-width:23px}.services-section{padding:28px 15px}.section-top{align-items:flex-start}.section-top h2{font-size:30px}.view-all{font-size:12px;gap:7px;margin-top:22px}.service-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.service-image-link{height:135px}.service-card-copy{min-height:100px;padding:8px 34px 10px 10px}.service-card h3{font-size:14px}.service-card p{font-size:11px}.round-arrow{width:27px;height:27px;right:5px;top:12px;font-size:17px}.planning-section{grid-template-columns:1fr;padding:48px 22px;gap:30px}.footer-main{padding:35px 22px 25px}.footer-links{gap:14px;font-size:13px}}
 @media(max-width:380px){.header-cta{font-size:0;gap:4px}.header-cta span{font-size:16px}.brand-name{font-size:18px}.brand-tag{letter-spacing:.6px}.service-grid{grid-template-columns:1fr}.service-image-link{height:190px}.service-card-copy{min-height:80px}.hero-actions{align-items:flex-start;flex-direction:column}.button{width:100%}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important}}
-
-
-/* QR codes and restored site chat integration */
-.qr-section{padding:48px 5%;background:#f5f1e9}
-.qr-inner{max-width:1250px;margin:0 auto;display:grid;grid-template-columns:minmax(240px,1.4fr) repeat(2,minmax(150px,.7fr));align-items:center;gap:28px}
-.qr-copy h2{margin:0 0 12px;font-family:var(--serif);font-size:clamp(28px,3vw,38px);line-height:1.2}
-.qr-copy>p:not(.eyebrow){max-width:470px;color:var(--body);line-height:1.75}
-.qr-card{display:flex;flex-direction:column;align-items:center;gap:8px;padding:18px 14px;border:1px solid var(--line);border-radius:10px;background:#fff;text-align:center}
-.qr-card img{width:150px;height:150px;max-width:100%;object-fit:contain;background:#fff}
-.qr-card strong{font-size:14px}
-.qr-card a{font-size:12px;color:var(--teal);overflow-wrap:anywhere}
-#whatsapp-chat-widget{position:fixed;right:20px;bottom:20px;z-index:9999}
-#whatsapp-chat-button{padding:12px 18px;border:0;border-radius:30px;color:#fff;background:#25d366;box-shadow:0 10px 20px #25d36640;font-weight:700;cursor:pointer}
-#whatsapp-chat-button:hover{filter:brightness(1.04)}
-.whatsapp-float{position:fixed;right:20px;bottom:20px;z-index:9999;display:inline-flex;padding:8px 12px;border:1px solid #e4e8ed;border-radius:999px;background:#fff;box-shadow:0 8px 24px #0000001f}
-.whatsapp-button{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border:0;border-radius:999px;color:#fff;background:#25d366;font-weight:700;cursor:pointer}
-@media(max-width:700px){.qr-inner{grid-template-columns:1fr 1fr;gap:14px}.qr-copy{grid-column:1/-1}.qr-card{padding:12px 8px}.qr-card img{width:125px;height:125px}}
