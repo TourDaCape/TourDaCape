@@ -222,3 +222,36 @@ img { max-width: 100%; }
 .recommendation-label{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--teal);}
 @media(max-width:850px){.area-recommendation-panel{grid-template-columns:1fr}.area-recommendation-list article{border-left:0;border-bottom:1px solid var(--line)}}
 @media(max-width:520px){.area-recommendation-list{grid-template-columns:1fr}.area-recommendation-list article{padding:18px}}
+
+
+/* Coordinated refinement: softer reading surface, consistent page rhythm, and predictable responsive grids. */
+:root{--ivory:#f7f5f0;--line:#e4ded3;--body:#46504f;}
+body{background:var(--ivory);}
+main{background:var(--ivory);}
+.page-hero{background:transparent;}
+.content-section{background:transparent;}
+.content-section.soft-section{background:#efede7;}
+.feature-card,.info-card,.step-card,.detail-card,.area-card,.contact-method{background:#fff;}
+.section-heading h2,.split-panel h2,.cta-panel h2,.contact-layout h2{color:var(--ink);}
+.page-hero-image img,.card-image,.area-image{display:block;object-fit:cover;}
+.area-card{overflow:hidden;}
+.area-image{min-width:0;}
+.waterfront-area-image{object-position:72% 56%;}
+/* Shared width and spacing rules keep pages aligned across desktop, tablet and mobile. */
+.content-section{padding-left:max(18px,calc((100vw - 1240px)/2));padding-right:max(18px,calc((100vw - 1240px)/2));}
+.page-hero{width:min(calc(100% - 48px),1240px);}
+.footer-main{width:min(calc(100% - 48px),1240px);}
+img{height:auto;}
+@media(max-width:850px){
+  .page-hero{grid-template-columns:1fr;gap:24px;padding-top:36px;padding-bottom:36px;}
+  .page-hero-image img{height:clamp(230px,45vw,360px);aspect-ratio:16/9;}
+  .area-grid{grid-template-columns:1fr;}
+  .area-card{grid-template-columns:minmax(190px,.8fr) 1.2fr;}
+}
+@media(max-width:600px){
+  .page-hero{width:calc(100% - 36px);}
+  .content-section{padding-left:18px;padding-right:18px;}
+  .area-card{grid-template-columns:1fr;}
+  .area-image{height:220px;min-height:0;}
+  .section-heading{text-align:left;}
+}
